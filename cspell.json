@@ -1,0 +1,23 @@
+// cSpell Settings
+{
+  // Version of the setting file.  Always 0.2
+  "version": "0.2",
+  // language - current active spelling language
+  "language": "en",
+  // words - list of words to be always considered correct
+  "words": ["Deno", "denoland", "deployctl", "kentos", "nothin"],
+  "ignorePaths": [
+    ".vscode/*",
+    ".husky/*",
+    "node_modules/*",
+    ".next/*",
+    "**/.vscode/*",
+    ".yarn",
+    "package.json",
+    "next.config.js"
+  ],
+  // flagWords - list of words to be always considered incorrect
+  // This is useful for offensive words and common spelling errors.
+  // For example "hte" should be "the"
+  "flagWords": ["hte"]
+}
