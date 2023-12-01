@@ -6,8 +6,9 @@ import type { FormData } from "./models/forms.ts";
 const router = new Router();
 
 router.post("/forms/contact", async (context) => {
-  console.log(JSON.stringify(await context));
   const body = await context.request.body();
+  console.log("Received Form Data:", JSON.stringify(body.value));
+
   const formData: FormData = body.value;
 
   const response = sendFormToAdmin(formData);
