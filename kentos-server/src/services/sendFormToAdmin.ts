@@ -1,4 +1,4 @@
-import nodemailer from "npm:nodemailer";
+import { SMTPClient } from "https://deno.land/x/denomailer@1.4.0/mod.ts";
 import type { FormData } from "../models/forms.ts";
 import SecretManager from "../utils/secretManager.ts";
 export const sendFormToAdmin = async ({
@@ -14,22 +14,26 @@ export const sendFormToAdmin = async ({
     const password = await secretManager.getSecret({
       secretName: "EMAIL_PASSWORD",
     });
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 578,
-      auth: {
-        user: username,
-        pass: password,
+    const client = new SMTPClient({
+      connection: {
+        hostname: "smtp.gmail.com",
+        port: 465,
+        tls: true,
+        auth: {
+          username,
+          password,
+        },
       },
     });
-    await transporter.sendMail({
+
+    await client.send({
       from: username,
       to: "kurthiga@gmail.com",
       subject: "Test email",
-      text: `name is ${name}, email is ${email}, message is ${message}`,
+      content: `name is ${name}, email is ${email}, message is ${message}`,
       // html: "<a href='https://github.com'>Github</a>",
     });
-
+    await client.close();
     return name;
   } catch (error) {
     throw error;
