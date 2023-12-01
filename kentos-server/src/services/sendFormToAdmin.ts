@@ -17,7 +17,7 @@ export const sendFormToAdmin = async ({
     const client = new SmtpClient();
     await client.connectTLS({
       hostname: "smtp.gmail.com",
-      port: 465,
+      port: 2525,
       username,
       password,
     });
