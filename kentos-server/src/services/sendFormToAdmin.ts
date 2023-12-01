@@ -15,7 +15,6 @@ export const sendFormToAdmin = async ({
       secretName: "EMAIL_PASSWORD",
     });
     const client = new SmtpClient();
-    console.log(`pw is ${password}`);
     await client.connectTLS({
       hostname: "smtp.gmail.com",
       port: 465,
