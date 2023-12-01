@@ -18,7 +18,6 @@ export const sendFormToAdmin = async ({
       connection: {
         hostname: "smtp.gmail.com",
         port: 465,
-        tls: true,
         auth: {
           username,
           password,
