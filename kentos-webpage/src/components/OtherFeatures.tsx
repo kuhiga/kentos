@@ -10,16 +10,15 @@ const OtherFeatures = () => {
               height="315"
               src="https://www.youtube.com/embed/ks0d_6K2Ft4?si=KFqPSmwvOt0O5RX0?autoplay=1"
               title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+              allowFullScreen
             ></iframe>
             <video
               className="m-auto object-fit object-center h-full w-1/2"
               controls
               width="400"
               height="300"
-              poster="./video-poster.jpg"
             >
               <source
                 src="https://www.youtube.com/watch?v=UyvX7O2WtV0&ab_channel=champurulife"

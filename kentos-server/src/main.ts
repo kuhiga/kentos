@@ -8,12 +8,9 @@ const router = new Router();
 
 router.post("/forms/contact", async (ctx) => {
   const body = ctx.request.body();
-  console.log("Received Form Data:", JSON.stringify(await body.value));
-
-  const formData = await body.value;
-
-  const response = sendFormToAdmin(JSON.parse(formData) as FormData);
-  ctx.response.body = response;
+  const formData: FormData = await body.value;
+  const name = await sendFormToAdmin(formData);
+  ctx.response.body = { name };
 });
 
 const app = new Application();
