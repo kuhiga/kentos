@@ -16,7 +16,7 @@ export const sendFormToAdmin = async ({
     });
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
-      port: 8443,
+      port: 578,
       auth: {
         user: username,
         pass: password,
