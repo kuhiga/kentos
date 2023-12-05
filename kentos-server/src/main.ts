@@ -8,8 +8,9 @@ const router = new Router();
 router.post("/forms/contact", async (ctx) => {
   const body = ctx.request.body();
   const formData: FormData = await body.value;
-  const name = await sendFormToAdmin(formData);
-  ctx.response.body = { name };
+  // const name = await sendFormToAdmin(formData);
+  console.log(Deno.env.toObject());
+  ctx.response.body = { hello: `hello ${Deno.env.get("HELLO")}` };
 });
 
 const app = new Application();
