@@ -1,6 +1,6 @@
 name: Deno Deploy kentos-server
 
-on: 
+on:
   workflow_dispatch:
 
 jobs:
@@ -18,4 +18,4 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: kentos-server # the name of the project on Deno Deploy
-          entrypoint: kentos-server/src/main.ts # the entrypoint to deploy
+          entrypoint: apps/kentos-server/src/main.ts # the entrypoint to deploy
