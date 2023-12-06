@@ -6,7 +6,8 @@
     "my-lib",
     "libs/my-lib",
     "libs/libs",
-    "libs"
+    "libs",
+    "apps/kentos-server2"
   ],
   "deno.unstable": true,
   "deno.importMap": "./import_map.json"
