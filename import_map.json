@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@kentos/libs": "./libs/mod.ts"
+  }
+}

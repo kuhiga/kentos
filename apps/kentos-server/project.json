@@ -1,0 +1,39 @@
+{
+  "name": "kentos-server",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/kentos-server/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/deno:esbuild",
+      "outputs": ["{workspaceRoot}/dist/apps/kentos-server"],
+      "options": {
+        "main": "apps/kentos-server/src/main.ts",
+        "outputFile": "dist/apps/kentos-server/main.js",
+        "denoConfig": "apps/kentos-server/deno.json"
+      }
+    },
+    "serve": {
+      "executor": "@nx/deno:run",
+      "options": {
+        "buildTarget": "kentos-server:build",
+        "watch": true
+      }
+    },
+    "test": {
+      "executor": "@nx/deno:test",
+      "outputs": ["{options.coverageDirectory}"],
+      "options": {
+        "coverageDirectory": "coverage/apps/kentos-server",
+        "denoConfig": "apps/kentos-server/deno.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/deno:lint",
+      "options": {
+        "denoConfig": "apps/kentos-server/deno.json"
+      }
+    }
+  },
+  "tags": []
+}

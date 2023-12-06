@@ -1,0 +1,24 @@
+{
+  "name": "libs",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs",
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/deno:test",
+      "outputs": ["{workspaceRoot}/coverage/libs"],
+      "options": {
+        "coverageDirectory": "coverage/libs",
+        "denoConfig": "libs/deno.json",
+        "check": "local"
+      }
+    },
+    "lint": {
+      "executor": "@nx/deno:lint",
+      "options": {
+        "denoConfig": "libs/deno.json"
+      }
+    }
+  },
+  "tags": []
+}
