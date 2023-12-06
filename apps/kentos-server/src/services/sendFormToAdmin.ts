@@ -1,18 +1,18 @@
-import type { FormData } from "../models/forms.ts";
+import type { FormData } from '@kentos/libs';
 export const sendFormToAdmin = async ({
   name,
   email,
   message,
 }: FormData): Promise<Response> => {
   try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${Deno.env.get("RESEND_API_KEY")}`,
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${Deno.env.get('RESEND_API_KEY')}`,
       },
       body: JSON.stringify({
-        from: "Kentos LLC <admin@kurthiga.com>",
+        from: 'Kentos LLC <admin@kurthiga.com>',
         to: [email],
         subject: `new student ${name}`,
         html: `<strong>${message} from ${email}!</strong>`,
@@ -25,7 +25,7 @@ export const sendFormToAdmin = async ({
       return new Response(data, {
         status: 200,
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       });
     } else {
@@ -35,11 +35,11 @@ export const sendFormToAdmin = async ({
       );
     }
   } catch (error) {
-    console.error("Error sending form to admin:", error.message);
-    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+    console.error('Error sending form to admin:', error.message);
+    return new Response(JSON.stringify({ error: 'Internal Server Error' }), {
       status: 500,
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
   }
