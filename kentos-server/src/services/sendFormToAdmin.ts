@@ -1,40 +1,46 @@
-import { SMTPClient } from "https://deno.land/x/denomailer@1.4.0/mod.ts";
 import type { FormData } from "../models/forms.ts";
-import SecretManager from "../utils/secretManager.ts";
 export const sendFormToAdmin = async ({
   name,
   email,
   message,
-}: FormData): Promise<string> => {
-  const secretManager = new SecretManager("admin_email");
+}: FormData): Promise<Response> => {
   try {
-    const username = await secretManager.getSecret({
-      secretName: "EMAIL_USERNAME",
-    });
-    const password = await secretManager.getSecret({
-      secretName: "EMAIL_PASSWORD",
-    });
-    const client = new SMTPClient({
-      connection: {
-        hostname: "smtp.gmail.com",
-        port: 465,
-        auth: {
-          username,
-          password,
-        },
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${Deno.env.get("RESEND_API_KEY")}`,
       },
+      body: JSON.stringify({
+        from: "Kentos LLC <admin@kurthiga.com>",
+        to: [email],
+        subject: `new student ${name}`,
+        html: `<strong>${message} from ${email}!</strong>`,
+      }),
     });
 
-    await client.send({
-      from: username,
-      to: "kurthiga@gmail.com",
-      subject: "Test email",
-      content: `name is ${name}, email is ${email}, message is ${message}`,
-      // html: "<a href='https://github.com'>Github</a>",
-    });
-    await client.close();
-    return name;
+    if (res.ok) {
+      const data = await res.json();
+
+      return new Response(data, {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    } else {
+      const errorData = await res.json();
+      throw new Error(
+        `API request failed with status ${res.status}: ${errorData.message}`
+      );
+    }
   } catch (error) {
-    throw error;
+    console.error("Error sending form to admin:", error.message);
+    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+      status: 500,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 };
