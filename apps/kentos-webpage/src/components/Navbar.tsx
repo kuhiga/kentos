@@ -27,12 +27,18 @@ const Navbar = () => {
             >
               Features
             </a>
+            {/* <a
+              href="#testimonials"
+              className="text-gray-500 hover:text-gray-900 mx-3 cursor-pointer"
+            >
+              Testimonials
+            </a>
             <a
               href="#pricing"
               className="text-gray-500 hover:text-gray-900 mx-3 cursor-pointer"
             >
               Pricing
-            </a>
+            </a> */}
             <a
               href="#contact"
               className="text-gray-500 hover:text-gray-900 mx-3 cursor-pointer"
