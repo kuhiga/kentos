@@ -10,13 +10,14 @@ export class AmplitudeGateway {
     this.apiUrl = config.AMPLITUDE_API_URL;
   }
 
-  public async sendEvent({ deviceId, eventType }: SendEventProps) {
+  public async sendEvent({ userId, eventType, data }: SendEventProps) {
     const eventData = {
       api_key: this.apiKey,
       events: [
         {
-          device_id: deviceId,
+          user_id: userId,
           event_type: eventType,
+          data: JSON.stringify(data),
           timestamp: new Date().toISOString(),
         },
       ],
@@ -30,7 +31,7 @@ export class AmplitudeGateway {
         },
         body: JSON.stringify(eventData),
       });
-      return res.json();
+      return res;
     } catch (e: any) {
       console.error('Error sending event to Amplitude:', e);
       throw e;

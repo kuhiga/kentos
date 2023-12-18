@@ -1,4 +1,10 @@
+import { useEffect } from 'react';
+import { sendEvent } from '../lib/analytics/sendEvent';
+
 const MainFeatures = () => {
+  useEffect(() => {
+    sendEvent({ eventName: 'pageVisited', eventData: { test: 'hello' } });
+  });
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 pb-12 mx-auto flex flex-col">

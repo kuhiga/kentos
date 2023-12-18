@@ -1,4 +1,5 @@
 export type SendEventProps = {
-  deviceId: string;
+  userId: string;
   eventType: string;
+  data: Record<string, string>;
 };
