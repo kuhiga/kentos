@@ -53,10 +53,8 @@ const Contact = () => {
           name="contact"
           method="POST"
           className="lg:w-1/2 md:w-2/3 mx-auto"
-          // onSubmit={handleSubmit}
-          netlify="true"
+          data-netlify="true"
         >
-          <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-wrap -m-2">
             <div className="p-2 w-full">
               <div className="relative">
@@ -70,8 +68,6 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
-                  // value={formData.name}
-                  // onChange={handleInputChange}
                   className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -88,8 +84,6 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
-                  // value={formData.email}
-                  // onChange={handleInputChange}
                   className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -105,8 +99,6 @@ const Contact = () => {
                 <textarea
                   id="message"
                   name="message"
-                  // value={formData.message}
-                  // onChange={handleInputChange}
                   className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
               </div>
