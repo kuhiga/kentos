@@ -52,9 +52,9 @@ const Contact = () => {
         <form
           name="contact"
           method="POST"
-          data-netlify="true"
           className="lg:w-1/2 md:w-2/3 mx-auto"
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
+          netlify
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-wrap -m-2">
