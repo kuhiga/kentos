@@ -11,6 +11,9 @@ export class AmplitudeGateway {
   }
 
   public async sendEvent({ userId, eventType, data }: SendEventProps) {
+    if (this.apiKey === '') {
+      throw new Error('api key is invalid');
+    }
     const eventData = {
       api_key: this.apiKey,
       events: [

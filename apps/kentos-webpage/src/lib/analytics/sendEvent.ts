@@ -20,7 +20,7 @@ export const sendEvent = async ({
 }: SendEventProps): Promise<void> => {
   const source = getTemporaryId();
   try {
-    const response = await fetch('http://kentos-server.deno.dev/analytics', {
+    const response = await fetch('https://kentos-server.deno.dev/analytics', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

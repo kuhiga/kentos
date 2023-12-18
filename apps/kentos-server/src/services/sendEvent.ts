@@ -12,7 +12,6 @@ export const sendAnalyticEvent = async ({
   try {
     const amp = new AmplitudeGateway();
     const res = await amp.sendEvent({ userId, eventType, data: eventData });
-
     if (res.ok) {
       const data = await res.json();
 
@@ -24,6 +23,7 @@ export const sendAnalyticEvent = async ({
       });
     } else {
       const errorData = await res.json();
+      console.log(`error data is ${JSON.stringify(errorData)}`);
       throw new Error(
         `Send Analytics API request failed with status ${res.status}: ${errorData.message}`
       );
