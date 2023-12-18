@@ -19,6 +19,12 @@ export const sendEvent = async ({
   eventData,
 }: SendEventProps): Promise<void> => {
   const source = getTemporaryId();
+  if (window.location.href.indexOf('localhost') > -1) {
+    console.log(`user is ${source}`);
+    console.log(`${eventName} event triggered`);
+    console.log(`event data is ${JSON.stringify(eventData)}`);
+    return;
+  }
   try {
     const response = await fetch('https://kentos-server.deno.dev/analytics', {
       method: 'POST',
