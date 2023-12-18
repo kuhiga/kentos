@@ -54,7 +54,14 @@ const Contact = () => {
           method="POST"
           className="lg:w-1/2 md:w-2/3 mx-auto"
           data-netlify="true"
+          netlify-honeypot="bot-field"
         >
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
+          <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-wrap -m-2">
             <div className="p-2 w-full">
               <div className="relative">
