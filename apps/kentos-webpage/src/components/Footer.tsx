@@ -16,38 +16,6 @@ const Footer = () => {
         <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
           © {currentYear} ケントス LLC
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <a
-            href="#hero"
-            className="text-gray-500 hover:text-gray-900 mx-3 cursor-pointer"
-          >
-            About
-          </a>
-          <a
-            href="#features"
-            className="text-gray-500 hover:text-gray-900 mx-3 cursor-pointer"
-          >
-            Features
-          </a>
-          {/* <a
-            href="#testimonials"
-            className="text-gray-500 hover:text-gray-900 mx-3 cursor-pointer"
-          >
-            Testimonials
-          </a>
-          <a
-            href="#pricing"
-            className="text-gray-500 hover:text-gray-900 mx-3 cursor-pointer"
-          >
-            Pricing
-          </a> */}
-          <a
-            href="#contact"
-            className="text-gray-500 hover:text-gray-900 mx-3 cursor-pointer"
-          >
-            Contact
-          </a>
-        </span>
       </div>
     </footer>
   );
