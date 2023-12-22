@@ -1,0 +1,10 @@
+---
+import { languages, defaultLang } from '../i18n/ui';
+---
+<ul>
+  {Object.entries(languages).map(([lang, label]) => (
+    <li>
+      {lang === defaultLang ? (<a href={`/`}>{label}</a>) : (<a href={`/${lang}/`}>{label}</a>)} 
+    </li>
+  ))}
+</ul>

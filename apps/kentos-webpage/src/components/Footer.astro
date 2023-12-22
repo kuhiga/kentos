@@ -1,0 +1,28 @@
+---
+// Import statements (if any) go here
+// Since we're using a date function, we include that in the script
+const currentYear = new Date().getFullYear();
+import LanguagePicker from '../components/LanguagePicker.astro';
+import { getLangFromUrl, getTranslatedAssetPath, useTranslatedPath, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
+---
+
+<footer class="text-gray-600 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a
+      href={translatePath('/')}
+      class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+    >
+      <img class="h-8 w-auto mr-4" src={getTranslatedAssetPath(lang, 'icon.png')} alt="Logo" />
+      <span class="ml-3 text-xl">Eigo Dojo</span>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
+      © {currentYear} ケントス LLC
+    </p>
+    <div class="sm:ml-6 sm:mt-0 mt-4">
+    <!-- <LanguagePicker /> -->
+    </div>
+  </div>
+</footer>
