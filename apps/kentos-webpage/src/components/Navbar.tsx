@@ -10,7 +10,7 @@ const navigation = [
 ];
 
 const Navbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -20,7 +20,7 @@ const Navbar = () => {
             className="flex items-center justify-between lg:justify-start"
             aria-label="Global"
           >
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">EigoDojo</span>
               <img className="h-8 w-auto mr-4" src="./icon.png" alt="Logo" />
             </a>

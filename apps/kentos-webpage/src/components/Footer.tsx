@@ -1,5 +1,3 @@
-import { Link } from 'react-scroll';
-
 const Footer = () => {
   // make 2023 label from current year
   const currentYear = new Date().getFullYear();
@@ -7,7 +5,7 @@ const Footer = () => {
     <footer className="text-gray-600 body-font">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a
-          href="#hero"
+          href="/"
           className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
         >
           <img className="h-8 w-auto mr-4" src="./icon.png" alt="Logo" />
