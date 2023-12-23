@@ -18,6 +18,7 @@ const Navbar = ({ url }: { url: URL }) => {
     { name: t('nav.about'), href: translatePath('/') },
     { name: t('nav.team'), href: translatePath('/team') },
     { name: t('nav.testimonials'), href: translatePath('/testimonials') },
+    { name: t('nav.pricing'), href: translatePath('/pricing') },
     { name: t('nav.contact'), href: translatePath('/contact') },
   ];
   return (
@@ -47,7 +48,7 @@ const Navbar = ({ url }: { url: URL }) => {
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
-            <div className="hidden lg:ml-12 lg:flex lg:gap-x-14">
+            <div className="hidden lg:ml-10 lg:flex lg:gap-x-14">
               {navigation.map((item) => (
                 <a
                   key={item.name}

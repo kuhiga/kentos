@@ -1,4 +1,4 @@
-<div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+<div class="isolate bg-white px-6 py-24 sm:py-40 lg:px-8">
   <div
     class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
     aria-hidden="true"
@@ -21,7 +21,13 @@
       just a message away!
     </p>
   </div>
-  <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+  <form name="contact" action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20" data-netlify="true" netlify-honeypot="bot-field">
+    <p class="hidden">
+      <label>
+        Don't fill this out if you're human: <input name="bot-field" />
+      </label>
+    </p>
+    <input type="hidden" name="form-name" value="contact" />
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
       <div>
         <label

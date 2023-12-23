@@ -11,12 +11,14 @@ export const routes = {
     about: '/',
     team: '/team',
     testimonials: '/testimonials',
+    pricing: '/pricing',
     contact: '/contact',
   },
   ja: {
     about: '/',
     team: '/team',
     testimonials: '/testimonials',
+    pricing: '/pricing',
     contact: '/contact',
   },
 };
@@ -27,6 +29,7 @@ export const ui = {
     'nav.about': 'About',
     'nav.team': 'Meet Your Tutor',
     'nav.testimonials': 'Testimonials',
+    'nav.pricing': 'Pricing',
     'nav.contact': 'Contact',
     //hero
     'hero.header':
@@ -41,6 +44,7 @@ export const ui = {
     'nav.about': '情報',
     'nav.team': '先生について',
     'nav.testimonials': 'レビュー',
+    'nav.pricing': '料金体系',
     'nav.contact': '連絡先',
     //hero
     'hero.header': '英語でアロハを感じ、会話を向上しよう！',

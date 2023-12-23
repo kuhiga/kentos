@@ -1,11 +1,9 @@
-import { languages, defaultLang } from '../i18n/ui';
 import { getRouteFromUrl } from '../i18n/utils';
 
 const LanguagePicker = ({ url }: { url: URL }) => {
-  console.log('url is ' + url);
   const route = getRouteFromUrl(url);
   const cleanRoute = route ? route.replace(/\//g, '') : undefined;
-g  return (
+  return (
     <span className="isolate inline-flex rounded-md shadow-sm">
       <a href={`/${cleanRoute ? cleanRoute : ''}`}>
         <button
