@@ -3,7 +3,6 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import {
   getLangFromUrl,
-  getTranslatedAssetPath,
   useTranslatedPath,
   useTranslations,
 } from '../i18n/utils';
@@ -27,7 +26,7 @@ const Navbar = ({ url }: { url: URL }) => {
         <a href={translatePath('/')} className="-m-6 p-1.5">
           <img
             className="h-16 w-auto"
-            src={getTranslatedAssetPath(lang, 'TalkStoryLogoWithSlogan.png')}
+            src="/TalkStoryLogoWithSlogan.png"
             alt="Logo"
           />
           <span className="sr-only">Talk Story</span>
@@ -75,11 +74,7 @@ const Navbar = ({ url }: { url: URL }) => {
           <div className="flex items-center justify-between">
             <a href={translatePath('/')} className="-m-1.5 p-1.5">
               <span className="sr-only">Talk Story</span>
-              <img
-                className="h-8 w-auto"
-                src={getTranslatedAssetPath(lang, 'TalkStoryLogo.png')}
-                alt=""
-              />
+              <img className="h-8 w-auto" src="/TalkStoryLogo.png" alt="" />
             </a>
             <button
               type="button"

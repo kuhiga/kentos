@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, getTranslatedAssetPath, useTranslatedPath, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslatedPath, useTranslations } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
@@ -40,7 +40,7 @@ const t = useTranslations(lang);
                     autoplay
                     muted
                     playsinline
-                    src={getTranslatedAssetPath(lang, 'DiamondHead.mp4')}
+                    src='/DiamondHead.mp4'
                     />
                 </div>
                 <p class="mt-6 text-lg leading-8 text-gray-600">
@@ -77,7 +77,7 @@ const t = useTranslations(lang);
             autoplay
             muted
             playsinline
-            src={getTranslatedAssetPath(lang, 'DiamondHead.mp4')}
+            src='/DiamondHead.mp4'
             />
         </div>
       </div>

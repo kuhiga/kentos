@@ -11,10 +11,6 @@ export function useTranslations(lang: keyof typeof ui) {
     return ui[lang][key] || ui[defaultLang][key];
   };
 }
-export function getTranslatedAssetPath(lang: keyof typeof ui, asset: string) {
-  const path = lang === defaultLang ? `/${asset}` : `/${asset}`;
-  return path;
-}
 
 export function useTranslatedPath(lang: keyof typeof ui) {
   return function translatePath(path: string, l: string = lang) {
