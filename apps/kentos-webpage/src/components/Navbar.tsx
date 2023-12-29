@@ -3,12 +3,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import {
   getLangFromUrl,
+  getTranslatedAssetPath,
   useTranslatedPath,
   useTranslations,
 } from '../i18n/utils';
-import { Image } from 'astro:assets';
-import TalkStoryLogoWithSlogan from '../assets/TalkStoryLogoWithSlogan.png';
-import TalkStoryLogo from '../assets/TalkStoryLogo.png';
 import LanguagePicker from './LanguagePicker.tsx';
 
 const Navbar = ({ url }: { url: URL }) => {
@@ -27,7 +25,11 @@ const Navbar = ({ url }: { url: URL }) => {
     <header className="absolute inset-x-0 top-0 z-50 flex-col">
       <div className="px-6 mx-auto flex h-11 my-5 max-w-7xl justify-between pt-6 gap-4 align-middle flex-col sm:flex-row">
         <a href={translatePath('/')} className="-m-6 p-1.5">
-          <Image height="16" src={TalkStoryLogoWithSlogan} alt="Logo" />
+          <img
+            className="h-16 w-auto"
+            src={getTranslatedAssetPath(lang, 'TalkStoryLogoWithSlogan.png')}
+            alt="Logo"
+          />
           <span className="sr-only">Talk Story</span>
         </a>
         <LanguagePicker url={url} />
@@ -73,7 +75,11 @@ const Navbar = ({ url }: { url: URL }) => {
           <div className="flex items-center justify-between">
             <a href={translatePath('/')} className="-m-1.5 p-1.5">
               <span className="sr-only">Talk Story</span>
-              <Image height="8" src={TalkStoryLogo} alt="Logo" />
+              <img
+                className="h-8 w-auto"
+                src={getTranslatedAssetPath(lang, 'TalkStoryLogo.png')}
+                alt=""
+              />
             </a>
             <button
               type="button"

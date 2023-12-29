@@ -4,7 +4,7 @@
 import { Image } from 'astro:assets';
 import LanguagePicker from '../components/LanguagePicker.astro';
 import { getLangFromUrl, useTranslatedPath, useTranslations } from '../i18n/utils';
-import TalkStoryLogoWithSlogan from '../assets/TalkStoryLogoWithSlogan.png'
+import TalkStoryLogoWithSlogan from '../../public/TalkStoryLogoWithSlogan.png'
 const currentYear = new Date().getFullYear();
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
