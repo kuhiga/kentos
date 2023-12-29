@@ -14,7 +14,7 @@ module.exports = {
         },
       },
       fill: (theme) => ({
-        custom: '#F6F6F6',
+        custom: '#ffff',
       }),
       zIndex: {
         60: '60',

@@ -4,6 +4,7 @@ const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
 ---
+<div>
       <div class="relative">
         <div class="mx-auto max-w-7xl">
           <div class="relative z-10 lg:w-full lg:max-w-2xl pt-32 pb-12">
@@ -33,7 +34,7 @@ const t = useTranslations(lang);
                 <h1 class="text-4xl font-thin tracking-tight text-gray-900 sm:text-6xl">
                   {t('hero.header')}
                 </h1>
-                <div class="pt-8 pb-8 lg:hidden block bg-gray-50">
+                <div class="pt-8 pb-8 lg:hidden block">
                   <video
                     class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
                     loop
@@ -70,7 +71,7 @@ const t = useTranslations(lang);
             </div>
           </div>
         </div>
-        <div class="hidden lg:block bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <video
             class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
             loop
@@ -81,3 +82,4 @@ const t = useTranslations(lang);
             />
         </div>
       </div>
+  </div>

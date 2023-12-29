@@ -1,9 +1,12 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { Image } from 'astro:assets';
+import Mountains from '../assets/mountains.png'
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<div class="isolate bg-white px-6 py-40 sm:py-40 lg:px-8">
+<div class="bg-white">
+<div class="isolate bg-white px-6 pt-40 pb-12 sm:pb-24 sm:pt-40 lg:px-8">
   <div
     class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
     aria-hidden="true"
@@ -111,4 +114,13 @@ const t = useTranslations(lang);
       </button>
     </div>
   </form>
+</div>
+  {/* Image section */}
+  <div class="bg-white xl:mx-auto xl:max-w-7xl px-6 pb-12 lg:px-32">
+    <Image
+      src={Mountains}
+      alt=""
+      class="w-full object-cover xl:rounded-3xl"
+    />
+  </div>
 </div>;

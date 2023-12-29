@@ -2,63 +2,69 @@
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { Image } from 'astro:assets';
 import KentProfPic from '../assets/kent.jpg'
-
+import HawaiiPanoramic from '../assets/hawaii_panoramic.jpg'
 const lang = getLangFromUrl(Astro.url);
 // const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
 ---
+<div class="relative isolate -z-10 overflow-hidden pt-32">
+  <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+      <p class="mt-2 text-3xl font-thin tracking-tight text-gray-900 sm:text-4xl lg:col-span-2 xl:col-auto">{t('team.header')}</p>
 
-<div class="mt-32 mb-32 overflow-hidden sm:mt-48">
-      <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
-          <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-            <h2 class="text-3xl font-thin tracking-tight text-gray-900 sm:text-4xl">
-                  {t('team.header')}
-            </h2>
-            <p class="mt-6 text-xl leading-8 text-gray-600">
-                  {t('team.description1')}
-<br><br>
-                  {t('team.description2')}
-<br><br>
-                  {t('team.description3')}
-<br><br>
-                  {t('team.description4')}
+      <!-- Image for small screens (sm) -->
+      <div class="sm:hidden mt-10 max-w-lg mx-auto">
+        <Image
+          src={KentProfPic}
+          alt=""
+          class="aspect-[6/5] w-full rounded-2xl object-cover"
+        />
+      </div>
 
-            </p>
-          </div>
-          <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
-            <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-              <Image
-                src={KentProfPic}
-                alt=""
-                class="aspect-[5/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
-              />
-            </div>
-            <div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
-              <div class="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
-                <img
-                  src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
-                  alt=""
-                  class="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
-                />
-              </div>
-              <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
-                <img
-                  src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
-                  alt=""
-                  class="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
-                />
-              </div>
-              <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
-                <img
-                  src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
-                  alt=""
-                  class="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+        <p class="mt-6 text-xl leading-8 text-gray-600">
+          {t('team.description1')}
+          <br><br>
+          {t('team.description2')}
+          <br><br>
+          {t('team.description3')}
+          <br><br>
+          {t('team.description4')}
+        </p>
+      </div>
+
+      <!-- Image for larger screens (lg and above) -->
+      <div class="hidden sm:block lg:mt-0 xl:row-span-2 xl:row-end-2 xl:mt-18">
+        <Image
+          src={KentProfPic}
+          alt=""
+          class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:max-w-none"
+        />
       </div>
     </div>
-
+  </div>
+  {lang === 'ja' && (
+    <div class="mx-auto max-w-7xl px-6 py-4 lg:px-8">
+      <h2 class="text-lg font-semibold">Kent Higa (ケント・ヒガ)</h2>
+      <ul class="list-disc pl-6 mt-2 text-gray-700">
+          <li>日英バイリンガル</li>
+          <li>本職：コンサルティング営業</li>
+          <li>早稲田大学国際教養学部卒業</li>
+          <li>2016年に外資系大手オンライン旅行会社に入社</li>
+          <li>2019年にハワイに転勤</li>
+          <li>元Cambly５つ星チューター</li>
+          <li>実績: 60生徒以上・レッスン回数：440・13,000分以上のトークタイム</li>
+          <li>TOEIC 990点</li>
+          <li>英語検定１級</li>
+      </ul>
+    </div>
+  )}
+                {/* Image section */}
+        <div class="mt-8 sm:mt-8 xl:mx-auto xl:max-w-7xl px-6 pb-12 lg:px-8">
+          <Image
+            src={HawaiiPanoramic}
+            alt=""
+            class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+          />
+        </div>
+</div>
