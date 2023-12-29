@@ -15,7 +15,7 @@ const Navbar = ({ url }: { url: URL }) => {
   const translatePath = useTranslatedPath(lang);
   const t = useTranslations(lang);
   const navigation = [
-    { name: t('nav.about'), href: translatePath('/') },
+    { name: t('nav.home'), href: translatePath('/') },
     { name: t('nav.team'), href: translatePath('/team') },
     { name: t('nav.testimonials'), href: translatePath('/testimonials') },
     { name: t('nav.pricing'), href: translatePath('/pricing') },
@@ -23,41 +23,43 @@ const Navbar = ({ url }: { url: URL }) => {
   ];
   return (
     <header className="absolute inset-x-0 top-0 z-50 flex-col">
-      <div className="mx-auto max-w-7xl px-6 pt-6">
+      <div className="px-6 mx-auto flex h-11 my-5 max-w-7xl justify-between pt-6 gap-4 align-middle flex-col sm:flex-row">
+        <a href={translatePath('/')} className="-m-6 p-1.5">
+          <img
+            className="h-16 w-auto"
+            src={getTranslatedAssetPath(lang, 'TalkStoryLogoWithSlogan.png')}
+            alt="Logo"
+          />
+          <span className="sr-only">Talk Story</span>
+        </a>
         <LanguagePicker url={url} />
       </div>
       <div className="mx-auto max-w-7xl">
-        <div className="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
+        <div className="px-6 pt-6 lg:max-w-2xl med:pl-8 med:pr-0">
           <nav
             className="flex items-center justify-between lg:justify-start"
             aria-label="Global"
           >
-            <a href={translatePath('/')} className="-m-1.5 p-1.5">
-              <span className="sr-only">EigoDojo</span>
-              <img
-                className="h-8 w-auto mr-4"
-                src={getTranslatedAssetPath(lang, 'icon.png')}
-                alt="Logo"
-              />
-            </a>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden"
-              onClick={() => setMobileMenuOpen(true)}
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            </button>
-            <div className="hidden lg:ml-10 lg:flex lg:gap-x-14">
+            <div className="hidden md:flex  gap-x-12">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-medium font-normal leading-6 text-gray-900"
+                  className="text-base font-normal leading-6 text-gray-900 text-nowrap"
                 >
                   {item.name}
                 </a>
               ))}
+            </div>
+            <div className="ml-auto">
+              <button
+                type="button"
+                className="-m-2.5 rounded-md p-2.5 text-gray-700 md:hidden lg:hidden"
+                onClick={() => setMobileMenuOpen(true)}
+              >
+                <span className="sr-only">Open main menu</span>
+                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              </button>
             </div>
           </nav>
         </div>
@@ -72,10 +74,10 @@ const Navbar = ({ url }: { url: URL }) => {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href={translatePath('/')} className="-m-1.5 p-1.5">
-              <span className="sr-only">EigoDojo</span>
+              <span className="sr-only">Talk Story</span>
               <img
                 className="h-8 w-auto"
-                src={getTranslatedAssetPath(lang, 'icon.png')}
+                src={getTranslatedAssetPath(lang, 'TalkStoryLogo.png')}
                 alt=""
               />
             </a>
@@ -95,7 +97,7 @@ const Navbar = ({ url }: { url: URL }) => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     {item.name}
                   </a>

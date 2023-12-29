@@ -1,38 +1,41 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const featuredTestimonial = {
-  body: `Kent is an incredibly kind and wonderful teacher. He doesn't just teach English; he also shares fascinating insights about Hawaiian culture and language. His lessons are always engaging and informative.`,
+  body: t('feedback.featured'),
 };
 const testimonials = [
   [
     [
       {
-        body: `The teacher has a warm and friendly demeanor, and patiently listens even when students are struggling to find the right words, making it easy to feel safe and trust in focusing on the lesson. Furthermore, the follow-up before and after lessons is very thorough, not only confirming the needs of the lesson but also providing a wealth of information on related topics. It's a wonderful teacher who encourages continuing English learning and inspires through engaging conversation.`,
+  body: t('feedback.1'),
       },
       {
-        body: `He has a clear voice and can also speak Japanese. I feel relaxed and am able to take the lesson.`
+  body: t('feedback.2'),
       }
     ],
     [
       {
-        body: 'Kent is a good teacher. His lesson makes me laugh and relax. Also you will get new things from his conversation. I enjoy his lesson every time.:)',
+  body: t('feedback.3'),
       }
     ],
   ],
   [
     [
       {
-        body: 'He is friendly and kind, always encourages me to speak!',
+  body: t('feedback.4'),
       },
       {
-        body: `The advice was very effective in a short amount of time. Thank you! ^^`
+  body: t('feedback.5'),
       }
     ],
     [
       {
-        body: `Kent is a caring, calm, and intelligent tutor who makes me motivated. I'm grateful to meet him through Cambly because he's such a great person, not only as a teacher.`,
+  body: t('feedback.6'),
       },
       {
-        body: `An experienced tutor always encourages you to speak more. Kent has excellent pronunciation, from which I learn a lot. He gives me the confidence to practice English and Japanese in our class. He is a fantastic teacher, very attentive and enthusiastic in teaching, and I really enjoy learning from Kent.`
+  body: t('feedback.7'),
       }
     ],
   ],
@@ -43,7 +46,7 @@ function classs(...classes) {
 }
 ---
 
-    <div class="relative isolate pb-32 pt-24 sm:pt-40">
+    <div class="relative isolate pb-32 pt-40 sm:pt-40">
       <div
         class="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
         aria-hidden="true"
@@ -71,7 +74,7 @@ function classs(...classes) {
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-xl text-center">
           <p class="mt-2 text-3xl font-thin tracking-tight text-gray-900 sm:text-4xl">
-            Feedback from students
+            {t('feedback.header')}
           </p>
         </div>
         <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">

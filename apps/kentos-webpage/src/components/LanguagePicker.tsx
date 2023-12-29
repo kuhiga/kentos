@@ -4,7 +4,7 @@ const LanguagePicker = ({ url }: { url: URL }) => {
   const route = getRouteFromUrl(url);
   const cleanRoute = route ? route.replace(/\//g, '') : undefined;
   return (
-    <span className="isolate inline-flex rounded-md shadow-sm">
+    <span className="isolate inline-flex rounded-md">
       <a href={`/${cleanRoute ? cleanRoute : ''}`}>
         <button
           type="button"
