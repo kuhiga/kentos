@@ -24,11 +24,11 @@ const url = Astro.url;
 		<meta name="description" content="Practice makes perfect! Let’s talk story!Embark on a journey to get comfortable and boost your self-confidence in your English. At Talk Story English, we create a learning environment where warmth, friendliness, and Aloha are the heart of every session. ">
 		<title>{title}</title>
 	</head>
-	<body>
-		<Navbar url={url} client:only="react" />
-		<slot />
-		<Footer />
-	</body>
+<body class="flex flex-col min-h-screen">
+	<Navbar url={url} client:only="react" />
+	<slot />
+	<Footer />
+</body>
 </html>
 <style is:global>
 	:root {

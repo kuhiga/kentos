@@ -31,7 +31,7 @@ export const ui = {
     'nav.pricing': 'Pricing',
     'nav.contact': 'Contact',
     //hero
-    'hero.header': 'Practice makes perfect! Let’s talk story!',
+    'hero.header': 'Let’s talk story!',
     'hero.description': `Embark on a journey to get comfortable and boost your self-confidence in your English. At Talk Story English, we create a learning environment where warmth, friendliness, and Aloha are the heart of every session. `,
     'hero.description2': `In Hawaiian Pidgin English, you’ll often hear the expression “talk story” which signifies open, informal dialogue and communication. This involves generously investing your time, engaging in unhurried conversations, and sharing and exchanging stories. `,
     'hero.description3': `Just chill, be present, and truly enjoy the conversation!`,

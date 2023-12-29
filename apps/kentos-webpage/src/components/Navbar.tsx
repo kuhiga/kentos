@@ -23,7 +23,7 @@ const Navbar = ({ url }: { url: URL }) => {
   return (
     <header className="absolute inset-x-0 top-0 z-50 flex-col">
       <div className="px-6 mx-auto flex h-11 my-5 max-w-7xl justify-between pt-6 gap-4 align-middle flex-col sm:flex-row">
-        <a href={translatePath('/')} className="-m-6 p-1.5">
+        <a href={translatePath('/')} className="-m-6 p-1.5 mb-2">
           <img
             className="h-16 w-auto"
             src="/TalkStoryLogoWithSlogan.png"
@@ -39,7 +39,7 @@ const Navbar = ({ url }: { url: URL }) => {
             className="flex items-center justify-between lg:justify-start"
             aria-label="Global"
           >
-            <div className="hidden md:flex  gap-x-12">
+            <div className="hidden sm:flex  gap-x-12">
               {navigation.map((item) => (
                 <a
                   key={item.name}
