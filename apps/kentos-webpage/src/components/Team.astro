@@ -1,5 +1,8 @@
 ---
-import { getLangFromUrl, getTranslatedAssetPath, useTranslatedPath, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { Image } from 'astro:assets';
+import KentProfPic from '../assets/kent.jpg'
+
 const lang = getLangFromUrl(Astro.url);
 // const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
@@ -25,8 +28,8 @@ const t = useTranslations(lang);
           </div>
           <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
             <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-              <img
-                src={getTranslatedAssetPath(lang, 'kent.jpg')}
+              <Image
+                src={KentProfPic}
                 alt=""
                 class="aspect-[5/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
               />

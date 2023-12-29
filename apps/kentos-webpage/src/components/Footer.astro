@@ -1,9 +1,11 @@
 ---
 // Import statements (if any) go here
 // Since we're using a date function, we include that in the script
-const currentYear = new Date().getFullYear();
+import { Image } from 'astro:assets';
 import LanguagePicker from '../components/LanguagePicker.astro';
-import { getLangFromUrl, getTranslatedAssetPath, useTranslatedPath, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslatedPath, useTranslations } from '../i18n/utils';
+import TalkStoryLogoWithSlogan from '../assets/TalkStoryLogoWithSlogan.png'
+const currentYear = new Date().getFullYear();
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
@@ -15,7 +17,7 @@ const t = useTranslations(lang);
       href={translatePath('/')}
       class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
     >
-      <img class="h-16 w-auto mr-4" src={getTranslatedAssetPath(lang, 'TalkStoryLogoWithSlogan.png')} alt="Logo" />
+      <Image class="h-16 w-auto mr-4" src={TalkStoryLogoWithSlogan} alt="Logo" />
       <span class="sr-only">Talk Story</span>
     </a>
     <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">

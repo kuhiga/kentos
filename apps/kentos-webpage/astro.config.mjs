@@ -5,7 +5,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.friendlyuser.github.io',
+  site: 'https://kentos.netlify.app',
   base: '/',
   integrations: [tailwind(), react()],
 });
