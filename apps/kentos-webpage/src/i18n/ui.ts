@@ -35,7 +35,7 @@ export const ui = {
     'hero.description': `Embark on a journey to get comfortable and boost your self-confidence in your English. At Talk Story English, we create a learning environment where warmth, friendliness, and Aloha are the heart of every session. `,
     'hero.description2': `In Hawaiian Pidgin English, you’ll often hear the expression “talk story” which signifies open, informal dialogue and communication. This involves generously investing your time, engaging in unhurried conversations, and sharing and exchanging stories. `,
     'hero.description3': `Just chill, be present, and truly enjoy the conversation!`,
-    'hero.contact': 'Get started',
+    'hero.contact': 'Schedule a free trial lesson',
     'hero.meetTutor': 'Meet your tutor',
 
     //team
@@ -64,14 +64,15 @@ export const ui = {
     'pricing.header': 'Pricing',
     'pricing.plan1.price': '$70',
     'pricing.plan1.description': 'Two Monthly Lesson Plan',
-    'pricing.plan1.highlight1': 'Two 50 minute sessions per month through Zoom',
-    'pricing.plan1.highlight2': '$35 per session',
+    'pricing.plan1.highlight1': 'One-on-one individual session',
+    'pricing.plan1.highlight2': 'Online lessons will be conducted via ZOOM',
+    'pricing.plan1.highlight3': '2 times a month, 50 minutes - $35',
     'pricing.plan1.button': 'Get started',
     'pricing.plan2.price': '$120',
-    'pricing.plan2.description': 'Four Monthly Lesson Package Deal Plan',
-    'pricing.plan2.highlight1':
-      'Four 50 minute sessions per month through Zoom',
-    'pricing.plan2.highlight2': '$30 per session',
+    'pricing.plan2.description': 'Four Monthly Lesson Plan',
+    'pricing.plan2.highlight1': 'One-on-one individual session',
+    'pricing.plan2.highlight2': 'Online lessons will be conducted via ZOOM',
+    'pricing.plan2.highlight3': '4 times a month, 50 minutes - $30',
     'pricing.plan2.button': 'Get started',
     'pricing.bestDealBadge': 'Best Deal',
     'pricing.perMonth': '/month',
@@ -94,11 +95,11 @@ export const ui = {
     'hero.description':
       'Talk Story Englishでは、温かさ、親しみやすさ、アロハを大切にした学習環境を整えています。',
     'hero.description2':
-      'ハワイのピジン語では、「talk story」という表現があり、これは、オープンでカジュアルな対話とコミュニケーションを意味します。ゆったりとした時間の中で、会話を通して、お互いのストーリーを共有することを大切にする文化から生まれた表現です。',
+      'ハワイのピジン英語では、「talk story」という表現があり、これは、オープンでカジュアルな対話とコミュニケーションを意味します。ゆったりとした時間の中で、会話を通して、お互いのストーリーを共有することを大切にする文化から生まれた表現です。',
     'hero.description3':
       '英語に自信を付けるには、練習あるのみです。深く考えすぎず、英語で対話することを心から楽しみましょう！',
-    'hero.contact': 'お問い合わせ',
-    'hero.meetTutor': '講師ーについて',
+    'hero.contact': '無料体験レッスンのお申し込み',
+    'hero.meetTutor': '講師について',
 
     //team
     'team.header': 'Aloha! ケントです。',
@@ -129,7 +130,7 @@ export const ui = {
     'pricing.plan1.highlight2': 'オンラインレッスンはZOOMにて行います',
     'pricing.plan1.highlight3': '月２回 50分・¥3500',
     'pricing.plan1.button': 'お問い合わせ',
-    'pricing.plan2.price': '$120',
+    'pricing.plan2.price': '¥12000',
     'pricing.plan2.description': '月4回レッスンパックプラン',
     'pricing.plan2.highlight1': 'マンツーマンの個別セッション',
     'pricing.plan2.highlight2': 'オンラインレッスンはZOOMにて行います',
@@ -139,7 +140,6 @@ export const ui = {
     'pricing.perMonth': '/一ヶ月',
     //contact
     'contact.header': 'お問い合わせ',
-    //contact
     'contact.firstName': '名前',
     'contact.lastName': '苗字',
     'contact.email': 'メールアドレス',
