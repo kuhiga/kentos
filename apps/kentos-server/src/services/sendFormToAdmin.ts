@@ -22,7 +22,9 @@ export const sendFormToAdmin = async ({
 
     if (res.ok) {
       const data = await res.json();
-
+      console.log(
+        `Success: form from ${firstName} has been sent to admin email`
+      );
       return new Response(data, {
         status: 200,
         headers: {
