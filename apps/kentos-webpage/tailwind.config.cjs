@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        chivo: ['Chivo', 'sans-serif'],
+        'noto-sans-jp': ['Noto Sans JP', 'sans-serif'],
       },
       color: {
         'website-background': {
