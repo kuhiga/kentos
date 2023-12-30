@@ -1,12 +1,12 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import Contact from "../../../components/Contact.astro";
+import Contact from "../../../components/Contact.tsx";
+import { getLangFromUrl } from '../../../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <Layout title="お問い合わせ | Talk Story English">
 	<main>
-		<Contact />
+		<Contact client:only="react" lang={lang} />
 	</main>
 </Layout>
-
-

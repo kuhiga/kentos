@@ -83,6 +83,11 @@ export const ui = {
     'contact.email': 'Email',
     'contact.message': 'Message',
     'contact.submit': 'Send Message',
+    'contact.submitted': 'Message Sent',
+    //form submitted
+    'formSubmitted.thanks': 'Thank you!',
+    'formSubmitted.description': `Your form has been sent. We'll reach out to you as soon as possible.`,
+    'formSubmitted.goBack': 'Go back',
   },
   ja: {
     'nav.home': 'ホーム',
@@ -145,5 +150,10 @@ export const ui = {
     'contact.email': 'メールアドレス',
     'contact.message': 'メッセージ',
     'contact.submit': 'メッセージを送信',
+    'contact.submitted': 'メッセージ送信済み',
+    //form submitted
+    'formSubmitted.thanks': 'ありがとうございます。',
+    'formSubmitted.description': `ご記入いただいたフォームは送信されました。できるだけ早くご連絡いたします。`,
+    'formSubmitted.goBack': '戻る',
   },
 } as const;
