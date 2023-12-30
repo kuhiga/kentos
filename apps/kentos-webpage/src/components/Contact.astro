@@ -23,11 +23,11 @@ const t = useTranslations(lang);
     <p class="mt-2 text-3xl font-thin tracking-tight text-gray-900 sm:text-4xl">
       {t('contact.header')}
     </p>
-    <p class="mt-2 text-lg leading-8 text-gray-600">
+    <!-- <p class="mt-2 text-lg leading-8 text-gray-600">
       Ready to elevate your English skills? I'm here to help! Feel free to reach
       out with any questions or to schedule a session. Your language journey is
       just a message away!
-    </p>
+    </p> -->
   </div>
   <form name="contact" action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20" data-netlify="true" netlify-honeypot="bot-field">
     <p class="hidden">
@@ -42,7 +42,7 @@ const t = useTranslations(lang);
           for="first-name"
           class="block text-sm font-semibold leading-6 text-gray-900"
         >
-          First name
+          {t('contact.firstName')}
         </label>
         <div class="mt-2.5">
           <input
@@ -59,7 +59,7 @@ const t = useTranslations(lang);
           for="last-name"
           class="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Last name
+          {t('contact.lastName')}
         </label>
         <div class="mt-2.5">
           <input
@@ -76,7 +76,7 @@ const t = useTranslations(lang);
           for="email"
           class="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Email
+          {t('contact.email')}
         </label>
         <div class="mt-2.5">
           <input
@@ -93,7 +93,7 @@ const t = useTranslations(lang);
           for="message"
           class="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Message
+          {t('contact.message')}
         </label>
         <div class="mt-2.5">
           <textarea
@@ -110,7 +110,7 @@ const t = useTranslations(lang);
         type="submit"
         class="block w-full rounded-md bg-blue-400  px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
       >
-        Send message
+          {t('contact.submit')}
       </button>
     </div>
   </form>

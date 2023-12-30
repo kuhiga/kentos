@@ -62,8 +62,26 @@ export const ui = {
 
     //pricing
     'pricing.header': 'Pricing',
+    'pricing.plan1.price': '$70',
+    'pricing.plan1.description': 'Two Monthly Lesson Plan',
+    'pricing.plan1.highlight1': 'Two 50 minute sessions per month through Zoom',
+    'pricing.plan1.highlight2': '$35 per session',
+    'pricing.plan1.button': 'Get started',
+    'pricing.plan2.price': '$120',
+    'pricing.plan2.description': 'Four Monthly Lesson Package Deal Plan',
+    'pricing.plan2.highlight1':
+      'Four 50 minute sessions per month through Zoom',
+    'pricing.plan2.highlight2': '$30 per session',
+    'pricing.plan2.button': 'Get started',
+    'pricing.bestDealBadge': 'Best Deal',
+    'pricing.perMonth': '/month',
     //contact
     'contact.header': 'Get started',
+    'contact.firstName': 'First Name',
+    'contact.lastName': 'Last Name',
+    'contact.email': 'Email',
+    'contact.message': 'Message',
+    'contact.submit': 'Send Message',
   },
   ja: {
     'nav.home': 'ホーム',
@@ -105,8 +123,27 @@ export const ui = {
     'feedback.7': `経験豊富なチューターは常にあなたにもっと話すように励ましてくれます。ケントは優れた発音を持っており、私は彼から多くを学びます。彼は私たちのクラスで英語と日本語の練習を自信を持って行うように私を励ましてくれます。彼は素晴らしい教師で、教えることにとても熱心で注意深く、ケントから学ぶことをとても楽しんでいます。`,
     //pricing
     'pricing.header': '料金プラン',
-
+    'pricing.plan1.price': '¥7000',
+    'pricing.plan1.description': '月2回レッスンパックプラン',
+    'pricing.plan1.highlight1': 'マンツーマンの個別セッション',
+    'pricing.plan1.highlight2': 'オンラインレッスンはZOOMにて行います',
+    'pricing.plan1.highlight3': '月２回 50分・¥3500',
+    'pricing.plan1.button': 'お問い合わせ',
+    'pricing.plan2.price': '$120',
+    'pricing.plan2.description': '月4回レッスンパックプラン',
+    'pricing.plan2.highlight1': 'マンツーマンの個別セッション',
+    'pricing.plan2.highlight2': 'オンラインレッスンはZOOMにて行います',
+    'pricing.plan2.highlight3': '月４回 50分・¥3000',
+    'pricing.plan2.button': 'お問い合わせ',
+    'pricing.bestDealBadge': 'ベストディール',
+    'pricing.perMonth': '/一ヶ月',
     //contact
     'contact.header': 'お問い合わせ',
+    //contact
+    'contact.firstName': '名前',
+    'contact.lastName': '苗字',
+    'contact.email': 'メールアドレス',
+    'contact.message': 'メッセージ',
+    'contact.submit': 'メッセージを送信',
   },
 } as const;
