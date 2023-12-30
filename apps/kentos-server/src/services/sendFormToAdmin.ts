@@ -1,6 +1,7 @@
 import type { FormData } from '@kentos/libs';
 export const sendFormToAdmin = async ({
-  name,
+  firstName,
+  lastName,
   email,
   message,
 }: FormData): Promise<Response> => {
@@ -12,10 +13,10 @@ export const sendFormToAdmin = async ({
         Authorization: `Bearer ${Deno.env.get('RESEND_API_KEY')}`,
       },
       body: JSON.stringify({
-        from: 'Kentos LLC <admin@kurthiga.com>',
-        to: [email],
-        subject: `new student ${name}`,
-        html: `<strong>${message} from ${email}!</strong>`,
+        from: 'Talk Story English <admin@mail.talkstoryenglish.com>',
+        to: [Deno.env.get('ADMIN_EMAIL') ?? 'kurthigaa@gmail.com'],
+        subject: `New student form submission from ${firstName} ${lastName}`,
+        html: `<body><div><div><div>New Contact Form Submission</div><p><strong>Name:</strong> ${firstName} ${lastName}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong></p><p>${message}</p></div></div></body>`,
       }),
     });
 
