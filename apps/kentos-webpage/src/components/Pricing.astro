@@ -11,9 +11,35 @@ const t = useTranslations(lang);
     <p class="mt-2 text-3xl font-thin tracking-tight text-gray-900 sm:text-4xl">{t('pricing.header')}</p>
   </div>
   <!-- <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">Qui iusto aut est earum eos quae. Eligendi est at nam aliquid ad quo reprehenderit in aliquid fugiat dolorum voluptatibus.</p> -->
- <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
+ <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-3">
+        <div class="rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10 bg-white/60 sm:mx-8 lg:mx-0 rounded-t-3xl sm:rounded-b-none lg:rounded-tr-none lg:rounded-bl-3xl">
+      <p class="mt-4 flex items-baseline gap-x-2">
+        <span class="text-5xl font-bold tracking-tight text-gray-900">{t('pricing.plan3.price')}</span>
+      </p>
+      <p class="mt-6 text-base leading-7 text-gray-600">{t('pricing.plan3.description')}</p>
+      <ul role="list" class="mt-8 space-y-3 text-sm leading-6 sm:mt-10 text-gray-600">
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          {t('pricing.plan3.highlight1')}
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          {t('pricing.plan3.highlight2')}
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          {t('pricing.plan3.highlight3')}
+        </li>
+      </ul>
+      <a href="/contact" aria-describedby="tier-hobby" class="mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 text-blue-500 ring-1 ring-inset ring-blue-200 hover:ring-blue-300 focus-visible:outline-blue-500">{t('pricing.plan1.button')}</a>
+    </div>
     <div class="rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10 bg-white/60 sm:mx-8 lg:mx-0 rounded-t-3xl sm:rounded-b-none lg:rounded-tr-none lg:rounded-bl-3xl">
-      <!-- <h3 id="tier-hobby" class="text-base font-semibold leading-7 text-blue-500">Trial Session</h3> -->
       <p class="mt-4 flex items-baseline gap-x-2">
         <span class="text-5xl font-bold tracking-tight text-gray-900">{t('pricing.plan1.price')}</span>
         <span class="text-base text-gray-500">{t('pricing.perMonth')}</span>
@@ -38,14 +64,9 @@ const t = useTranslations(lang);
           </svg>
           {t('pricing.plan1.highlight3')}
         </li>
-        <!-- <li class="flex gap-x-3">
-          <svg class="h-6 w-5 flex-none text-blue-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-          </svg>
-          24-hour support response time
-        </li>  -->
       </ul>
-      <a href="/contact" aria-describedby="tier-hobby" class="mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 text-blue-800 ring-1 ring-inset ring-blue-200 hover:ring-blue-300 focus-visible:outline-blue-500">{t('pricing.plan1.button')}</a>
+      <a href="/contact" aria-describedby="tier-hobby" class="mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 text-blue-500 ring-1 ring-inset ring-blue-200 hover:ring-blue-300 focus-visible:outline-blue-500">{t('pricing.plan1.button')}</a>
+      <p class="mx-auto mt-6 max-w-2xl text-center text-xs leading-8 text-gray-600">{t('pricing.taxExclusionNotice')}</p>
     </div>
     <div class="rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10 relative bg-white shadow-2xl">
       <h3 id="tier-personal" class="text-base font-semibold leading-7 text-blue-500">{t('pricing.bestDealBadge')}</h3>
@@ -75,7 +96,8 @@ const t = useTranslations(lang);
         </li>
       </ul>
       <a href="#" aria-describedby="tier-personal" class="mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 sm:mt-10 bg-blue-500 text-white shadow hover:bg-blue-500">{t('pricing.plan2.button')}
-</a>
+      </a>
+      <p class="mx-auto mt-6 max-w-2xl text-center text-xs leading-8 text-gray-600">{t('pricing.taxExclusionNotice')}</p>
     </div>
   </div>
 </div>
