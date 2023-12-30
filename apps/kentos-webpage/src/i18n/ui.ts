@@ -146,7 +146,7 @@ export const ui = {
     //contact
     'contact.header': 'お問い合わせ',
     'contact.firstName': '名前',
-    'contact.lastName': '苗字',
+    'contact.lastName': '姓',
     'contact.email': 'メールアドレス',
     'contact.message': 'メッセージ',
     'contact.submit': 'メッセージを送信',
