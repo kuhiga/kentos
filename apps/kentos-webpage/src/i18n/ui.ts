@@ -34,7 +34,7 @@ export const ui = {
     'hero.header': 'Let’s talk story!',
     'hero.description': `Embark on a journey to get comfortable and boost your self-confidence in your English. At Talk Story English, we create a learning environment where warmth, friendliness, and Aloha are the heart of every session. `,
     'hero.description2': `In Hawaiian Pidgin English, you’ll often hear the expression “talk story” which signifies open, informal dialogue and communication. This involves generously investing your time, engaging in unhurried conversations, and sharing and exchanging stories. `,
-    'hero.description3': `Just chill, be present, and truly enjoy the conversation!`,
+    'hero.description3': `Just chill, be present, and enjoy the conversation!`,
     'hero.contact': 'Schedule a free trial lesson',
     'hero.meetTutor': 'Meet your tutor',
 
@@ -108,7 +108,7 @@ export const ui = {
     //hero
     'hero.header': 'Let’s talk story!',
     'hero.description':
-      'Talk Story Englishでは、温かさ、親しみやすさ、アロハを大切にした学習環境を整えています。',
+      'Talk Story Englishでは、温かさ、親しみやすさ、ハワイ発のオンライン英会話サービスです。',
     'hero.description2':
       'ハワイのピジン英語では、「talk story」という表現があり、これは、オープンでカジュアルな対話とコミュニケーションを意味します。ゆったりとした時間の中で、会話を通して、お互いのストーリーを共有することを大切にする文化から生まれた表現です。',
     'hero.description3':
@@ -123,7 +123,7 @@ export const ui = {
     'team.description2':
       '私の今までの人生経験から、様々なバックグラウンドの人と会話をすることが、より深い友情や異文化への理解につながり、最終的には、より豊かで幸せな人生を送ることにつながると確信しています。',
     'team.description3':
-      'Talk Story Englishでは、皆様の英語力を高めるために最適な、温かさと親しみやすさが溢れた環境作りを目指し、皆様それぞれの目標に合わせた、会話を中心としたレッスンを行ないます。',
+      'Talk Story Englishでは、皆様の英語力を高めるために最適な、温かさと親しみやすさが溢れた環境作りを目指し、皆様それぞれの目標に合わせた、会話を中心としたレッスンを行ないます。そして、ハワイが好きな生徒の方には、旅行業界のプロとして、ハワイ旅行に関してのアドバイス、最新のトレンドやハワイの文化についてご紹介することもできます！',
     'team.description4':
       'さて、準備はできましたか？まずは、無料体験レッスンを予約いただき、一緒に英語に慣れ、英語に自信をつける旅に出かけましょう！',
 
@@ -139,17 +139,17 @@ export const ui = {
     'feedback.7': `経験豊富なチューターは常にあなたにもっと話すように励ましてくれます。ケントは優れた発音を持っており、私は彼から多くを学びます。彼は私たちのクラスで英語と日本語の練習を自信を持って行うように私を励ましてくれます。彼は素晴らしい教師で、教えることにとても熱心で注意深く、ケントから学ぶことをとても楽しんでいます。`,
     //pricing
     'pricing.header': '料金プラン',
-    'pricing.plan1.price': '¥7000',
+    'pricing.plan1.price': '¥8000',
     'pricing.plan1.description': '月２回レッスンプラン',
     'pricing.plan1.highlight1': 'マンツーマンの個別セッション',
     'pricing.plan1.highlight2': 'オンラインレッスンはZOOMにて行います',
-    'pricing.plan1.highlight3': '月2回50分・50分あたりに換算すると¥3500',
+    'pricing.plan1.highlight3': '月2回50分・50分あたりに換算すると¥4000',
     'pricing.plan1.button': 'お問い合わせ',
-    'pricing.plan2.price': '¥12000',
+    'pricing.plan2.price': '¥14000',
     'pricing.plan2.description': '月4回レッスンプラン',
     'pricing.plan2.highlight1': 'マンツーマンの個別セッション',
     'pricing.plan2.highlight2': 'オンラインレッスンはZOOMにて行います',
-    'pricing.plan2.highlight3': '月4回50分・50分あたりに換算すると¥3000',
+    'pricing.plan2.highlight3': '月4回50分・50分あたりに換算すると¥3500',
     'pricing.plan2.button': 'お問い合わせ',
     'pricing.plan3.price': '¥0',
     'pricing.plan3.description': '無料体験',
