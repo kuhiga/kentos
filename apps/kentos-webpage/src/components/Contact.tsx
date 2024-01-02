@@ -11,22 +11,32 @@ const Contact = ({ lang }: { lang: string }) => {
     email: '',
     message: '',
   });
-  const handleInputChange = (e) => {
-    setFormData((prevData) => ({
+  const [fakeFormData, setFakeFormData] = useState({
+    name: '',
+    email: '',
+  });
+  const handleFakeFormInputChange = (e) => {
+    setFakeFormData((prevData) => ({
       ...prevData,
       [e.target.name]: e.target.value,
     }));
   };
-  const [formSent, setFormSent] = useState(false);
+  const handleInputChange = (e) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [e.target.name.replace('123lmp', '')]: e.target.value,
+    }));
+  };
   const [modalOpen, setModalOpen] = useState(false);
   const handleModalClose = useCallback(() => {
     setModalOpen(false);
   }, []);
   const handleSubmit = async (e) => {
-    setFormSent(true);
-    console.log('form data is ', JSON.stringify(formData));
     e.preventDefault();
     try {
+      if (fakeFormData.email !== '' || fakeFormData.name !== '') {
+        return;
+      }
       const response = await fetch(
         'https://kentos-server.deno.dev/forms/contact',
         {
@@ -38,14 +48,18 @@ const Contact = ({ lang }: { lang: string }) => {
         }
       );
       if (response.ok) {
-        const responseData = await response.json();
-        console.log('API Response:', responseData);
         setModalOpen(true);
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          message: '',
+        });
       } else {
-        console.error('API Request failed:', response.statusText);
+        //console.error('API Request failed:', response.statusText);
       }
     } catch (error) {
-      console.error('Error during API request:', error);
+      //console.error('Error during API request:', error);
     }
   };
   return (
@@ -81,16 +95,48 @@ const Contact = ({ lang }: { lang: string }) => {
           onSubmit={handleSubmit}
           className="mx-auto mt-16 max-w-xl sm:mt-20"
         >
-          {/* <p className="hidden">
-            <label>
-              Don't fill this out if you're human: <input name="bot-field" />
-            </label>
-          </p>
-          <input type="hidden" name="form-name" value="contact" required /> */}
+          {/* H o n e y p o t  */}
+          <label
+            className="opacity-0 absolute top-0 left-0 h-0 w-0 -z-10"
+            aria-hidden="true"
+            tabIndex={-1}
+            htmlFor="name"
+          ></label>
+          <input
+            className="opacity-0 absolute top-0 left-0 h-0 w-0 -z-10"
+            aria-hidden="true"
+            tabIndex={-1}
+            autoComplete="off"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name here"
+            value={fakeFormData.name}
+            onChange={handleFakeFormInputChange}
+          />
+          <label
+            className="opacity-0 absolute top-0 left-0 h-0 w-0 -z-10"
+            aria-hidden="true"
+            tabIndex={-1}
+            htmlFor="email"
+          ></label>
+          <input
+            className="opacity-0 absolute top-0 left-0 h-0 w-0 -z-10"
+            aria-hidden="true"
+            tabIndex={-1}
+            autoComplete="off"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your e-mail here"
+            value={fakeFormData.email}
+            onChange={handleFakeFormInputChange}
+          />
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+            {/* Real fields  */}
             <div>
               <label
-                htmlFor="first-name"
+                htmlFor="firstName123lmp"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
                 {t('contact.firstName')}
@@ -100,8 +146,8 @@ const Contact = ({ lang }: { lang: string }) => {
                   type="text"
                   value={formData.firstName}
                   onChange={handleInputChange}
-                  name="firstName"
-                  id="first-name"
+                  name="firstName123lmp"
+                  id="firstName123lmp"
                   autoComplete="given-name"
                   className="appearance-none block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   required
@@ -110,7 +156,7 @@ const Contact = ({ lang }: { lang: string }) => {
             </div>
             <div>
               <label
-                htmlFor="last-name"
+                htmlFor="lastName123lmp"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
                 {t('contact.lastName')}
@@ -120,8 +166,8 @@ const Contact = ({ lang }: { lang: string }) => {
                   type="text"
                   value={formData.lastName}
                   onChange={handleInputChange}
-                  name="lastName"
-                  id="last-name"
+                  name="lastName123lmp"
+                  id="lastName123lmp"
                   autoComplete="family-name"
                   className="appearance-none block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   required
@@ -130,7 +176,7 @@ const Contact = ({ lang }: { lang: string }) => {
             </div>
             <div className="sm:col-span-2">
               <label
-                htmlFor="email"
+                htmlFor="email123lmp"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
                 {t('contact.email')}
@@ -138,10 +184,10 @@ const Contact = ({ lang }: { lang: string }) => {
               <div className="mt-2.5">
                 <input
                   type="email"
-                  name="email"
+                  name="email123lmp"
                   value={formData.email}
                   onChange={handleInputChange}
-                  id="email"
+                  id="email123lmp"
                   autoComplete="email"
                   className="appearance-none block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   required
@@ -150,17 +196,17 @@ const Contact = ({ lang }: { lang: string }) => {
             </div>
             <div className="sm:col-span-2">
               <label
-                htmlFor="message"
+                htmlFor="message123lmp"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
                 {t('contact.message')}
               </label>
               <div className="mt-2.5">
                 <textarea
-                  name="message"
+                  name="message123lmp"
                   value={formData.message}
                   onChange={handleInputChange}
-                  id="message"
+                  id="message123lmp"
                   rows={4}
                   className="appearance-none block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -171,9 +217,8 @@ const Contact = ({ lang }: { lang: string }) => {
             <button
               type="submit"
               className="block w-full disabled:bg-blue-800 rounded-md bg-blue-400  px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              disabled={formSent}
             >
-              {formSent ? t('contact.submitted') : t('contact.submit')}
+              {t('contact.submit')}
             </button>
           </div>
         </form>
