@@ -107,7 +107,7 @@ export const ui = {
     //hero
     'hero.header': 'Let’s talk story!',
     'hero.description':
-      'Talk Story Englishでは、温かさ、親しみやすさ、アロハを大切にしたハワイ発のオンライン英会話サービスです',
+      'Talk Story Englishでは、温かさ、親しみやすさ、アロハを大切にしたハワイ発のオンライン英会話サービスです。',
     'hero.description2':
       'ハワイのピジン英語では、「talk story」という表現があり、これは、オープンでカジュアルな対話とコミュニケーションを意味します。ゆったりとした時間の中で、会話を通して、お互いのストーリーを共有することを大切にする文化から生まれた表現です。',
     'hero.description3':
