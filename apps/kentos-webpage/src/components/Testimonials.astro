@@ -99,13 +99,15 @@ function classs(...classes) {
                   )}
                 >
                   {column.map((testimonial) => (
-                    <figure
-                      class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
-                    >
-                      <blockquote class="text-gray-900">
+                    testimonial.body && (
+                      <figure
+                        class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+                      >
+                        <blockquote class="text-gray-900">
                         <p>{`“${testimonial.body}”`}</p>
-                      </blockquote>
-                    </figure>
+                        </blockquote>
+                      </figure>
+                    )
                   ))}
                 </div>
               ))}

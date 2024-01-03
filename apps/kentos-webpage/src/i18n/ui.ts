@@ -52,13 +52,12 @@ export const ui = {
     //feedback
     'feedback.header': 'Feedbacks from students',
     'feedback.featured': `Kent is an incredibly kind and wonderful teacher. He doesn't just teach English; he also shares fascinating insights about Hawaiian culture and language. His lessons are always engaging and informative.`,
-    'feedback.1': `The teacher has a warm and friendly demeanor, and patiently listens even when students are struggling to find the right words, making it easy to feel safe and trust in focusing on the lesson. Furthermore, the follow-up before and after lessons is very thorough, not only confirming the needs of the lesson but also providing a wealth of information on related topics. It's a wonderful teacher who encourages continuing English learning and inspires through engaging conversation.`,
+    'feedback.1': `An experienced tutor always encourages you to speak more. And Kent has very great pronunciation, which I learn a lot from him. Gives me confidence to practice English and Japanese in our class. 很棒的老師, 很細心且熱情地在教學, 很喜歡向Kent學習`,
     'feedback.2': `He has a clear voice and can also speak Japanese. I feel relaxed and am able to take the lesson.`,
     'feedback.3': `Kent is a good teacher. His lesson makes me laugh and relax. Also you will get new things from his conversation. I enjoy his lesson every time.:)`,
     'feedback.4': `He is friendly and kind, always encourages me to speak!`,
-    'feedback.5': `His advice was very effective in a short amount of time. Thank you! ^^`,
-    'feedback.6': `Kent is a caring, calm, and intelligent tutor who makes me motivated. I'm grateful to meet him through Cambly because he's such a great person, not only as a teacher.`,
-    'feedback.7': `An experienced tutor always encourages you to speak more. Kent has excellent pronunciation, from which I learn a lot. He gives me the confidence to practice English and Japanese in our class. He is a fantastic teacher, very attentive and enthusiastic in teaching, and I really enjoy learning from Kent.`,
+    'feedback.5': `Kent is a caring, calm, and intelligent tutor who makes me motivated. I'm grateful to meet him through Cambly because he's such a great person, not only as a teacher.`,
+    'feedback.6': `The teacher has a warm and friendly demeanor, and patiently listens even when students are struggling to find the right words, making it easy to feel safe and trust in focusing on the lesson. Furthermore, the follow-up before and after lessons is very thorough, not only confirming the needs of the lesson but also providing a wealth of information on related topics. It's a wonderful teacher who encourages continuing English learning and inspires through engaging conversation.`,
 
     //pricing
     'pricing.header': 'Pricing',
@@ -129,14 +128,14 @@ export const ui = {
 
     //feedback
     'feedback.header': '生徒の声',
-    'feedback.featured': `Kentはとても親切で素晴らしい教師です。彼は英語を教えるだけでなく、ハワイ文化や言語についても魅力的な洞察を共有します。彼のレッスンは常に魅力的で有益です。`,
-    'feedback.1': `先生は温かくフレンドリーな雰囲気を持ち、生徒が適切な言葉を見つけるのに苦労しているときでも辛抱強く耳を傾けてくれるため、授業に集中して安心感を持つことが容易です。さらに、授業前後のフォローアップが非常に徹底しており、授業のニーズを確認するだけでなく、関連するトピックに関する豊富な情報も提供してくれます。魅力的な会話を通じて英語学習を続けるよう励まし、刺激を与えてくれる素晴らしい先生です。`,
+    'feedback.featured': `優しくてとっても素敵な先生です。英語だけでなく、ハワイの文化や言語についても教えてくれます。`,
+    'feedback.1': `あたたかみがあり、フレンドリー、そして生徒が言葉に詰まっていても忍耐強く話を聞いてくれるため、安心＆信頼してレッスンに集中することができます。また、レッスン前と終了後のフォローも非常に丁寧で、レッスンのニーズを確認してくれるだけでなく、それに関連したトピックの情報を豊かに提供してくれます。英語学習を続けることを、エンカレッジして、おしゃべりでインスパイアしてくれる素敵な先生です`,
     'feedback.2': `彼ははっきりとした声を持ち、日本語も話せます。リラックスしてレッスンを受けることができます。`,
     'feedback.3': `ケントは良い教師です。彼のレッスンは私を笑わせ、リラックスさせてくれます。また、彼の会話から新しいことを学ぶことができます。私は毎回彼のレッスンを楽しんでいます。:)`,
-    'feedback.4': `彼はフレンドリーで親切で、いつも私が話すことを励ましてくれます！`,
-    'feedback.5': `彼のアドバイスは短時間でとても効果的でした。ありがとうございます！ ^^`,
-    'feedback.6': `ケントは思いやりがあり、落ち着いていて、知的なチューターで、私をやる気にさせてくれます。彼は教師としてだけでなく、素晴らしい人物として、Camblyを通じて彼に出会えたことに感謝しています。`,
-    'feedback.7': `経験豊富なチューターは常にあなたにもっと話すように励ましてくれます。ケントは優れた発音を持っており、私は彼から多くを学びます。彼は私たちのクラスで英語と日本語の練習を自信を持って行うように私を励ましてくれます。彼は素晴らしい教師で、教えることにとても熱心で注意深く、ケントから学ぶことをとても楽しんでいます。`,
+    'feedback.4': `素晴らしい先生で、とても丁寧に熱心に教えてくれます！`,
+    'feedback.5': `Kentは思いやりがあり、穏やかな講師で、私のやる気を引き出してくれます。先生としてだけでなく、とても素晴らしい人なので、Camblyを通して彼に出会えたことに感謝しています。`,
+    'feedback.6': `経験豊富な講師で、常にもっと話すように促してくれます。Kent先生の発音はとてもきれいで、とても勉強になります。クラスで英語と日本語を練習する自信がつきました。`,
+    'feedback.7': `彼はフレンドリーで親切で、いつも私が話すことを励ましてくれます！`,
     //pricing
     'pricing.header': '料金プラン',
     'pricing.plan1.price': '¥8000',
