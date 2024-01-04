@@ -1,32 +1,31 @@
 ---
-  import { getRouteFromUrl } from '../i18n/utils';
-  const route = getRouteFromUrl(Astro.url);
-  const cleanRoute = route ? route.replace(/\//g, '') : undefined;
+import { getRouteFromUrl } from "../i18n/utils";
+const route = getRouteFromUrl(Astro.url);
+const cleanRoute = route ? route.replace(/\//g, "") : undefined;
 ---
 
-    <span class="isolate inline-flex rounded-md shadow-sm">
-        <button
-          type="button"
-          class="englishBtn relative inline-flex items-center rounded-l-md bg-white px-3 py-1 text-sm font-normal text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
-        >
-          English
-        </button>
-        <button
-          type="button"
-          class="japaneseBtn relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-1 text-sm font-normal text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
-        >
-          日本語
-        </button>
-    </span>
+<span class="isolate inline-flex rounded-md shadow-sm">
+  <button
+    type="button"
+    class="englishBtn relative inline-flex items-center rounded-l-md bg-white px-3 py-1 text-sm font-normal text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
+  >
+    English
+  </button>
+  <button
+    type="button"
+    class="japaneseBtn relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-1 text-sm font-normal text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
+  >
+    日本語
+  </button>
+</span>
 
 <script define:vars={{ cleanRoute }}>
-  const englishBtn = document.querySelector('button.englishBtn');
-  const japaneseBtn = document.querySelector('button.japaneseBtn');
-  englishBtn.addEventListener('click', () => {
-     window.location.href = `/${cleanRoute ? cleanRoute : ''}`;
-  })
-  japaneseBtn.addEventListener('click', () => {
-      window.location.href = `/ja/${cleanRoute ? cleanRoute : ''}`
-  })
-
+  const englishBtn = document.querySelector("button.englishBtn");
+  const japaneseBtn = document.querySelector("button.japaneseBtn");
+  englishBtn.addEventListener("click", () => {
+    window.location.href = `/${cleanRoute ? cleanRoute : ""}`;
+  });
+  japaneseBtn.addEventListener("click", () => {
+    window.location.href = `/ja/${cleanRoute ? cleanRoute : ""}`;
+  });
 </script>

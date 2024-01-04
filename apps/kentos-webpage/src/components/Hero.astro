@@ -1,91 +1,97 @@
 ---
-import { getLangFromUrl, useTranslatedPath, useTranslations } from '../i18n/utils';
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
 ---
 
 <div class="pt-6 md:pt-4 lg:pt-0 pb-12">
-        <div class="relative">
-  <div class="mx-auto max-w-7xl">
-    <div class="flex-col relative z-10 lg:w-full lg:max-w-2xl pt-32">
-      <svg
-        class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-custom lg:block"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-      >
-        <polygon points="0,0 90,0 50,100 0,100" />
-      </svg>
+  <div class="relative">
+    <div class="mx-auto max-w-7xl">
+      <div class="flex-col relative z-10 lg:w-full lg:max-w-2xl pt-32">
+        <svg
+          class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-custom lg:block"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <polygon points="0,0 90,0 50,100 0,100"></polygon>
+        </svg>
 
-      <div class="relative px-6 py-16 sm:py-16 lg:px-8 lg:py-16 lg:pr-0">
-        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+        <div class="relative px-6 py-16 sm:py-16 lg:px-8 lg:py-16 lg:pr-0">
+          <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+            {/* Video background for the h1 tag */}
+            <div class="lg:hidden absolute inset-0">
+              <video
+                class="aspect-[3/2] object-cover h-72 w-full"
+                loop
+                autoplay
+                muted
+                playsinline
+                src="/DiamondHead.mp4"></video>
+            </div>
 
-          {/* Video background for the h1 tag */}
-          <div class="lg:hidden absolute inset-0">
-            <video
-              class="aspect-[3/2] object-cover h-72 w-full"
-              loop
-              autoplay
-              muted
-              playsinline
-              src='/DiamondHead.mp4'
-            />
-          </div>
-
-          <div class="relative z-10 pt-16 pb-0 lg:pt-1">
-            <h1 class="text-center lg:text-start text-4xl font-semibold md:font-light tracking-tight text-white lg:text-gray-900 sm:text-5xl">
-              {t('hero.header')}
-            </h1>
-          </div>
-          <div class="relative mt-7 pb-4 flex justify-center lg:hidden">
+            <div class="relative z-10 pt-16 pb-0 lg:pt-1">
+              <h1
+                class="text-center lg:text-start text-4xl font-semibold md:font-light tracking-tight text-white lg:text-gray-900 sm:text-5xl"
+              >
+                {t("hero.header")}
+              </h1>
+            </div>
+            <div class="relative mt-7 pb-4 flex justify-center lg:hidden">
               <a
-                href={translatePath('/contact')}
+                href={translatePath("/contact")}
                 class="w-64 text-center rounded-md bg-blue-400 px-3.5 py-3.5 text-med font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                {t('hero.contact')}
+                {t("hero.contact")}
               </a>
-          </div>
+            </div>
 
-          {/* Rest of the content, positioned below the video */}
-          <div class="relative flex-col pt-2 lg:pt-6 pb-0 z-10 mt-5 md:mt-3 lg:mt-0">
-            <p class="mt-6 text-lg leading-8 text-gray-600">
-              {t('hero.description')}
-            </p>
-            <p class="mt-6 text-lg leading-8 text-gray-600">
-              {t('hero.description2')}
-            </p>
-            <p class="mt-6 text-lg leading-8 text-gray-600">
-              {t('hero.description3')}
-            </p>
-            <div class="mt-10 flex items-center gap-x-6">
-              <a
-                href={translatePath('/contact')}
-                class="rounded-md bg-blue-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                {t('hero.contact')}
-              </a>
-              <a
-                href={translatePath('/team')}
-                class="text-sm font-normal leading-6 text-gray-900"
-              >
-                {t('hero.meetTutor')} <span aria-hidden="true">→</span>
-              </a>
+            {/* Rest of the content, positioned below the video */}
+            <div
+              class="relative flex-col pt-2 lg:pt-6 pb-0 z-10 mt-5 md:mt-3 lg:mt-0"
+            >
+              <p class="mt-6 text-lg leading-8 text-gray-600">
+                {t("hero.description")}
+              </p>
+              <p class="mt-6 text-lg leading-8 text-gray-600">
+                {t("hero.description2")}
+              </p>
+              <p class="mt-6 text-lg leading-8 text-gray-600">
+                {t("hero.description3")}
+              </p>
+              <div class="mt-10 flex items-center gap-x-6">
+                <a
+                  href={translatePath("/contact")}
+                  class="rounded-md bg-blue-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  {t("hero.contact")}
+                </a>
+                <a
+                  href={translatePath("/team")}
+                  class="text-sm font-normal leading-6 text-gray-900"
+                >
+                  {t("hero.meetTutor")}
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <video
+        class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
+        loop
+        autoplay
+        muted
+        playsinline
+        src="/DiamondHead.mp4"></video>
+    </div>
   </div>
-  <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-    <video
-      class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
-      loop
-      autoplay
-      muted
-      playsinline
-      src='/DiamondHead.mp4'
-    />
-  </div>
-</div>
 </div>

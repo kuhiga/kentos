@@ -1,12 +1,12 @@
-import { Dialog } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { useState } from 'react';
+import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
 import {
   getLangFromUrl,
   useTranslatedPath,
   useTranslations,
-} from '../i18n/utils';
-import LanguagePicker from './LanguagePicker.tsx';
+} from "../i18n/utils";
+import LanguagePicker from "./LanguagePicker.tsx";
 
 const Navbar = ({ url }: { url: URL }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -14,16 +14,16 @@ const Navbar = ({ url }: { url: URL }) => {
   const translatePath = useTranslatedPath(lang);
   const t = useTranslations(lang);
   const navigation = [
-    { name: t('nav.home'), href: translatePath('/') },
-    { name: t('nav.team'), href: translatePath('/team') },
-    { name: t('nav.testimonials'), href: translatePath('/testimonials') },
-    { name: t('nav.pricing'), href: translatePath('/pricing') },
-    { name: t('nav.contact'), href: translatePath('/contact') },
+    { name: t("nav.home"), href: translatePath("/") },
+    { name: t("nav.team"), href: translatePath("/team") },
+    { name: t("nav.testimonials"), href: translatePath("/testimonials") },
+    { name: t("nav.pricing"), href: translatePath("/pricing") },
+    { name: t("nav.contact"), href: translatePath("/contact") },
   ];
   return (
     <header className="absolute inset-x-0 top-0 z-50 flex-col">
       <div className="px-6 mx-auto flex h-11 my-5 max-w-7xl justify-between pt-6 gap-4 align-middle flex-col sm:flex-row">
-        <a href={translatePath('/')} className="-m-6 p-1.5 mb-2">
+        <a href={translatePath("/")} className="-m-6 p-1.5 mb-2">
           <img
             className="h-16 w-auto"
             src="/TalkStoryLogoWithSlogan.png"
@@ -72,7 +72,7 @@ const Navbar = ({ url }: { url: URL }) => {
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href={translatePath('/')} className="-m-1.5 p-1.5">
+            <a href={translatePath("/")} className="-m-1.5 p-1.5">
               <span className="sr-only">Talk Story English</span>
               <img className="h-8 w-auto" src="/TalkStoryLogo.png" alt="" />
             </a>

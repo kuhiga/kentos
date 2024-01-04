@@ -1,72 +1,103 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import { Image } from 'astro:assets';
-import KentProfPic from '../assets/kent.jpg'
-import HawaiiPanoramic from '../assets/hawaii_panoramic.jpg'
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { Image } from "astro:assets";
+import KentProfPic from "../assets/kent.jpg";
+import HawaiiPanoramic from "../assets/hawaii_panoramic.jpg";
 const lang = getLangFromUrl(Astro.url);
 // const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
 ---
-<div class="relative isolate -z-10 overflow-hidden pt-32">
+
+<div class="flex-col -z-10 overflow-hidden pt-32">
   <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
-      <p class="mt-2 text-3xl font-thin tracking-tight text-gray-900 sm:text-4xl lg:col-span-2 xl:col-auto">{t('team.header')}</p>
-
+    <div
+      class="flex-col mx-auto max-w-2xl lg:mx-0 lg:max-w-none lg:gap-x-16 lg:gap-y-6  xl:gap-x-8"
+    >
       <!-- Image for small screens (sm) -->
-      <div class="sm:hidden mt-10 max-w-lg mx-auto">
-        <Image
-          src={KentProfPic}
-          alt=""
-          class="aspect-[6/5] w-full rounded-2xl object-cover"
-        />
+      <div class="lg:hidden mt-10 mb-6 max-w-lg mx-auto">
+        <iframe
+            class="aspect-[5/3] w-full object-cover"
+            src="https://www.youtube.com/embed/C7VDIoaC3xE?si=FoYcMI4zZexCFYeB"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
       </div>
+      <div class="flex flex-row justify-center lg:gap-12">
+        <div class="flex-1 flex-col min-w-1/2">
+          <p
+            class="align-center mt-2 text-3xl font-thin tracking-tight text-gray-900 sm:text-4xl "
+          >
+            {t("team.header")}
+          </p>
+          <div class="mt-6 max-w-3xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+            <p class="mt-6 text-xl leading-8 text-gray-600">
+              {t("team.description1")}
+              <br /><br />
+              {t("team.description2")}
+              <br /><br />
+              {t("team.description3")}
+              <br /><br />
+              {t("team.description4")}
+            </p>
+          </div>
+        </div>
 
-      <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-        <p class="mt-6 text-xl leading-8 text-gray-600">
-          {t('team.description1')}
-          <br><br>
-          {t('team.description2')}
-          <br><br>
-          {t('team.description3')}
-          <br><br>
-          {t('team.description4')}
-        </p>
-      </div>
-
-      <!-- Image for larger screens (lg and above) -->
-      <div class="hidden sm:block lg:mt-0 xl:row-span-2 xl:row-end-2 xl:mt-18">
-        <Image
-          src={KentProfPic}
-          alt=""
-          class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:max-w-none"
-        />
+        <!-- Image for larger screens (lg and above) -->
+        <div
+          class="flex-initial hidden lg:block w-full md:w-1/2 lg:mt-24 xl:row-span-2 xl:row-end-2 align-middle"
+        >
+          <iframe
+            class="aspect-[5/3] w-full object-cover"
+            src="https://www.youtube.com/embed/C7VDIoaC3xE?si=FoYcMI4zZexCFYeB"
+            title="Talk Story English Introduction Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
-  {lang === 'ja' && (
-    <div class="mx-auto max-w-7xl px-6 py-4 lg:px-8 text-xl leading-8">
-      <h2 class="font-semibold">Kent H. (ケント・H.)</h2>
-      <ul class="list-disc pl-6 mt-2 text-gray-600">
-          <li>日英バイリンガル</li>
-          <li>本職：コンサルティング営業</li>
-          <li>早稲田大学国際教養学部卒業</li>
-          <li>2016年に外資系大手オンライン旅行会社に入社</li>
-          <li>2019年にハワイに転勤</li>
-          <li>元Cambly５つ星チューター</li>
-            <ul class="list-disc pl-6 text-gray-600">
-              <li>実績: 60生徒以上・レッスン回数：440・13,000分以上のトークタイム</li>
+  <div>
+    <div class="justify-center mx-auto max-w-lg md:max-w-none flex flex-col md:flex-row xl:mx-auto xl:max-w-7xl px-6 lg:px-8 py-4 lg:mb-28 md:gap-12 xl:gap-28">
+          <div class="mb-6 md:mb-12 lg:mb-0 w-full md:w-2/5 mx-auto">
+            <Image
+              src={KentProfPic}
+              alt=""
+              class="aspect-[6/5] w-full max-w-lg xl:mx-auto rounded-2xl object-cover"
+            />
+          </div>
+    {
+      lang === "ja" && (
+          <div class="text-balance flex-1 w-full lg:w-3/5 lg:px-8 text-xl leading-8 mx-auto">
+            <h2 class="font-semibold">Kent H. (ケント・H.)</h2>
+            <ul class="list-disc pl-6 mt-2 text-gray-600">
+              <li>日英バイリンガル</li>
+              <li>本職：コンサルティング営業</li>
+              <li>早稲田大学国際教養学部卒業</li>
+              <li>2016年に外資系大手オンライン旅行会社に入社</li>
+              <li>2019年にハワイに転勤</li>
+              <li>元Cambly５つ星チューター</li>
+              <ul class="list-disc pl-6 text-gray-600">
+                <li>
+                  実績:
+                  60生徒以上・レッスン回数：440・13,000分以上のトークタイム
+                </li>
+              </ul>
+              <li>TOEIC 990点</li>
+              <li>英語検定１級</li>
             </ul>
-          <li>TOEIC 990点</li>
-          <li>英語検定１級</li>
-      </ul>
-    </div>
-  )}
-                {/* Image section */}
-        <div class="mt-8 sm:mt-8 xl:mx-auto xl:max-w-7xl px-6 pb-12 lg:px-8">
-          <Image
-            src={HawaiiPanoramic}
-            alt=""
-            class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
-          />
+          </div>
         </div>
+      )
+    }
+  </div>
+  {/* Image section */}
+  <div class="mt-8 sm:mt-8 xl:mx-auto xl:max-w-7xl px-6 pb-12 lg:px-8">
+    <Image
+      src={HawaiiPanoramic}
+      alt=""
+      class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+    />
+  </div>
 </div>

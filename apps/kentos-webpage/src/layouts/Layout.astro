@@ -1,70 +1,108 @@
 ---
-import Footer from '../components/Footer.astro';
-import Navbar from '../components/Navbar';
-import { getLangFromUrl } from '../i18n/utils';
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar";
+import { getLangFromUrl } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 const url = Astro.url;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang={lang}>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon1.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-		<meta name="google-site-verification" content="0B_pubxV8cbJ0b4PFIMeEm13lyASSN28RcEaG6ISf9I" />
-		<meta name="keywords" content="Talk Story English, Virtual English Teacher, Learn English Online, Hawaii, native speaker, English Lesson, Hawaii, practice english ">
-		<meta name="description" content="Talk Story English is a Hawaii-based online English tutoring service where warmth, friendliness and Aloha are the heart of every session. Let’s talk story!">
-		<meta property="og:title" content="Talk Story English" />
-		<meta property="og:site_name" content="Talk Story English" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://www.talkstoryenglish.com" />
-		<meta property="og:description" content={"Talk Story English is a Hawaii-based online English tutoring service where warmth, friendliness and Aloha are the heart of every session. Let’s talk story!"} />
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:image" content="https://www.talkstoryenglish.com/TalkStoryEnglish.png" />
-		<!-- Google tag (gtag.js) -->
-		<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-SNT4HT1WC8"></script>
-		<script type="text/partytown">
-  			window.dataLayer = window.dataLayer || [];
-  			function gtag(){dataLayer.push(arguments);}
-  			gtag('js', new Date());
-  			gtag('config', 'G-SNT4HT1WC8');
-		</script>
-		<title>{title}</title>
-	</head>
-<body class="flex flex-col min-h-screen">
-	<Navbar url={url} client:only="react" />
-	<slot />
-	<Footer />
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon1.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="google-site-verification"
+      content="0B_pubxV8cbJ0b4PFIMeEm13lyASSN28RcEaG6ISf9I"
+    />
+    <meta
+      name="keywords"
+      content="Talk Story English, Virtual English Teacher, Learn English Online, Hawaii, native speaker, English Lesson, Hawaii, practice english "
+    />
+    <meta
+      name="description"
+      content="Talk Story English is a Hawaii-based online English tutoring service where warmth, friendliness and Aloha are the heart of every session. Let’s talk story!"
+    />
+    <meta property="og:title" content="Talk Story English" />
+    <meta property="og:site_name" content="Talk Story English" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.talkstoryenglish.com" />
+    <meta
+      property="og:description"
+      content={"Talk Story English is a Hawaii-based online English tutoring service where warmth, friendliness and Aloha are the heart of every session. Let’s talk story!"}
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:image"
+      content="https://www.talkstoryenglish.com/TalkStoryEnglish.png"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SNT4HT1WC8"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-SNT4HT1WC8");
+    </script>
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Navbar url={url} client:only="react" />
+    <slot />
+    <Footer />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
 </style>
 
 <script define:vars={{ lang }}>
-  	document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const rootHtml = document.documentElement;
-    if (lang === 'en') {
+    if (lang === "en") {
       rootHtml.style.fontFamily = "'Chivo', sans-serif";
-    } else if (lang === 'ja') {
+    } else if (lang === "ja") {
       rootHtml.style.fontFamily = "'Noto Sans JP', sans-serif";
     }
   });

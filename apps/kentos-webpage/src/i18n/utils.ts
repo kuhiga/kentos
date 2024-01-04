@@ -1,7 +1,7 @@
-import { ui, defaultLang, showDefaultLang, routes } from './ui';
+import { ui, defaultLang, showDefaultLang, routes } from "./ui";
 
 export function getLangFromUrl(url: URL) {
-  const [, lang] = url.pathname.split('/');
+  const [, lang] = url.pathname.split("/");
   if (lang in ui) return lang as keyof typeof ui;
   return defaultLang;
 }
@@ -20,7 +20,7 @@ export function useTranslatedPath(lang: keyof typeof ui) {
 
 export function getRouteFromUrl(url: URL): string | undefined {
   const pathname = new URL(url).pathname;
-  const parts = pathname?.split('/');
+  const parts = pathname?.split("/");
   const path = parts.pop() || parts.pop();
 
   if (path === undefined) {
@@ -36,7 +36,7 @@ export function getRouteFromUrl(url: URL): string | undefined {
 
   const getKeyByValue = (
     obj: Record<string, string>,
-    value: string
+    value: string,
   ): string | undefined => {
     return Object.keys(obj).find((key) => key === value);
   };
