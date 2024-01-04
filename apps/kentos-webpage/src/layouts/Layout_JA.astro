@@ -5,9 +5,10 @@ import { getLangFromUrl } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 export interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 const url = Astro.url;
 ---
 
@@ -36,19 +37,12 @@ const url = Astro.url;
       name="keywords"
       content="Talk Story English, オンライン, 英会話, ハワイ, ネイティブ, 英会話, 英会話教室, オンライン英会話, 英語教室, ネイティブの英語, アメリカ英語, 英語レッスン, オンライン英語"
     />
-    <meta
-      name="description"
-      lang="ja"
-      content="Talk Story Englishでは、温かさ、親しみやすさ、アロハを大切にしたハワイ発のオンライン英会話サービス。ハワイ在住日英バイリンガルのアメリカ人講師。"
-    />
-    <meta property="og:title" content="Talk Story English" />
-    <meta property="og:site_name" content="Talk Story English" />
+    <meta name="description" lang="ja" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content={title} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.talkstoryenglish.com/ja" />
-    <meta
-      property="og:description"
-      content={"Talk Story Englishでは、温かさ、親しみやすさ、アロハを大切にしたハワイ発のオンライン英会話サービス。ハワイ在住日英バイリンガルのアメリカ人講師。"}
-    />
+    <meta property="og:description" content={description} />
     <meta property="og:locale" content="ja_JP" />
     <meta
       property="og:image"

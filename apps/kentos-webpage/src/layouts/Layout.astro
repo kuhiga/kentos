@@ -5,9 +5,10 @@ import { getLangFromUrl } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 export interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 const url = Astro.url;
 ---
 
@@ -36,18 +37,12 @@ const url = Astro.url;
       name="keywords"
       content="Talk Story English, Virtual English Teacher, Learn English Online, Hawaii, native speaker, English Lesson, Hawaii, practice english "
     />
-    <meta
-      name="description"
-      content="Talk Story English is a Hawaii-based online English tutoring service where warmth, friendliness and Aloha are the heart of every session. Let’s talk story!"
-    />
-    <meta property="og:title" content="Talk Story English" />
-    <meta property="og:site_name" content="Talk Story English" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content={title} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.talkstoryenglish.com" />
-    <meta
-      property="og:description"
-      content={"Talk Story English is a Hawaii-based online English tutoring service where warmth, friendliness and Aloha are the heart of every session. Let’s talk story!"}
-    />
+    <meta property="og:description" content={description} />
     <meta property="og:locale" content="en_US" />
     <meta
       property="og:image"

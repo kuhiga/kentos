@@ -139,7 +139,7 @@ const Contact = ({ lang }: { lang: string }) => {
                 htmlFor="firstName123lmp"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
-                {t("contact.firstName")}
+                {lang === "ja" ? t("contact.lastName") : t("contact.firstName")}
               </label>
               <div className="mt-2.5">
                 <input
@@ -159,7 +159,7 @@ const Contact = ({ lang }: { lang: string }) => {
                 htmlFor="lastName123lmp"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
-                {t("contact.lastName")}
+                {lang === "ja" ? t("contact.firstName") : t("contact.lastName")}
               </label>
               <div className="mt-2.5">
                 <input

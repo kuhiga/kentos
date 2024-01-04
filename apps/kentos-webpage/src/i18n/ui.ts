@@ -111,7 +111,7 @@ export const ui = {
     "hero.description2":
       "ハワイのピジン英語では、「talk story」という表現があり、これは、オープンでカジュアルな対話とコミュニケーションを意味します。ゆったりとした時間の中で、会話を通して、お互いのストーリーを共有することを大切にする文化から生まれた表現です。",
     "hero.description3":
-      "英語に自信を付けるには、練習あるのみです。深く考えすぎず、英語で対話することを心から楽しみましょう！",
+      "英語を話すことに自信を持つには、練習あるのみです。深く考えすぎず、英語で話すことを心から楽しみましょう！",
     "hero.contact": "無料体験レッスンのお申し込み",
     "hero.meetTutor": "講師について",
 
@@ -161,7 +161,7 @@ export const ui = {
     "pricing.taxExclusionNotice": "＊金額は「税別」の表記となっています",
     //contact
     "contact.header": "お問い合わせ",
-    "contact.firstName": "名前",
+    "contact.firstName": "名",
     "contact.lastName": "姓",
     "contact.email": "メールアドレス",
     "contact.message": "メッセージ",
