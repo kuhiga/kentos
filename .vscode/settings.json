@@ -1,6 +1,6 @@
 {
   "deno.enablePaths": ["apps/kentos-server", "libs/**/*", "my-lib", "libs"],
   "deno.lint": true,
-  // "deno.unstable": true,
-  "deno.importMap": "./import_map.json"
+  "deno.importMap": "./import_map.json",
+  "deno.unstable": true
 }
