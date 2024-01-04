@@ -13,7 +13,14 @@ const t = useTranslations(lang);
     <div
       class="flex-col mx-auto max-w-2xl lg:mx-0 lg:max-w-none lg:gap-x-16 lg:gap-y-6  xl:gap-x-8"
     >
-      <!-- Image for small screens (sm) -->
+      <div class="flex flex-row justify-center lg:gap-12">
+        <div class="flex-1 flex-col min-w-1/2">
+          <p
+            class="align-center mt-2 text-3xl font-thin tracking-tight text-gray-900 sm:text-4xl "
+          >
+            {t("team.header")}
+          </p>
+                <!-- Image for small screens (sm) -->
       <div class="lg:hidden mt-10 mb-6 max-w-lg mx-auto">
         <iframe
             class="aspect-[5/3] w-full object-cover"
@@ -23,13 +30,6 @@ const t = useTranslations(lang);
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
       </div>
-      <div class="flex flex-row justify-center lg:gap-12">
-        <div class="flex-1 flex-col min-w-1/2">
-          <p
-            class="align-center mt-2 text-3xl font-thin tracking-tight text-gray-900 sm:text-4xl "
-          >
-            {t("team.header")}
-          </p>
           <div class="mt-6 max-w-3xl lg:mt-0 xl:col-end-1 xl:row-start-1">
             <p class="mt-6 text-xl leading-8 text-gray-600">
               {t("team.description1")}
