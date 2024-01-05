@@ -97,6 +97,10 @@ export const ui = {
     "formSubmitted.thanks": "Mahalo Nui!",
     "formSubmitted.description": `Your form submission has been received. We'll get back to you as soon as we can!`,
     "formSubmitted.goBack": "Go back",
+
+    //youtube
+    "video.introduction":
+      "https://www.youtube.com/embed/NXdoQBxUIgg?si=SKYptFkvwJtl9esT",
   },
   ja: {
     "nav.home": "ホーム",
@@ -171,5 +175,9 @@ export const ui = {
     "formSubmitted.thanks": "Mahalo Nui!",
     "formSubmitted.description": `フォームの送信を受け付けました。できるだけ早くお返事いたします！`,
     "formSubmitted.goBack": "戻る",
+
+    //youtube
+    "video.introduction":
+      "https://www.youtube.com/embed/C7VDIoaC3xE?si=FoYcMI4zZexCFYeB",
   },
 } as const;
