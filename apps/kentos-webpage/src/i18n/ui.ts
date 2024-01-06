@@ -33,15 +33,15 @@ export const ui = {
     //hero
     "hero.header": "Let’s talk story!",
     "hero.description": `Embark on a journey to get comfortable and boost your self-confidence in your English. At Talk Story English, we create a learning environment where warmth, friendliness, and Aloha are the heart of every session. `,
-    "hero.description2": `In Hawaiian Pidgin English, you’ll often hear the expression “talk story” which signifies open, informal dialogue and communication. This involves generously investing your time, engaging in unhurried conversations, and sharing and exchanging stories. `,
-    "hero.description3": `Just chill, be present, and enjoy the conversation!`,
+    "hero.description2": `In Hawaiian Pidgin English, you'll often hear the expression "talk story", which signifies an open and casual conversation. It involves investing your time in engaging in unhurried, personable conversations, where people listen and exchange stories, experiences, and ideas. This practice leads to stronger connections and understanding among those who share the space to talk story.`,
+    "hero.description3": undefined,
     "hero.contact": "Schedule a free trial lesson",
     "hero.meetTutor": "Meet your tutor",
 
     //team
     "team.header": "Aloha! I’m Kent.",
     "team.description1":
-      "Born and raised in the San Francisco Bay Area, I took a bold step at the age of 15, leaving my family to embark on a solo journey to Japan. Over the course of 15 years and across five different cities, I immersed myself in diverse cultures and backgrounds, learning the joy and the importance of effective communication.",
+      "I took a bold step at the age of 15, leaving my family to embark on a solo journey to Japan. Over the course of 15 years and across five different cities, I immersed myself in diverse cultures and backgrounds, learning the joy and the importance of effective communication.",
     "team.description2":
       "My life experiences have underscored the belief that the ability to connect with people from various walks of life leads to more profound connections, friendships, and an enriched understanding of different cultures - ultimately contributing to a fuller, happier life.",
     "team.description3":

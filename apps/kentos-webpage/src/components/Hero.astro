@@ -61,9 +61,13 @@ const t = useTranslations(lang);
               <p class="mt-6 text-lg leading-8 text-gray-600">
                 {t("hero.description2")}
               </p>
-              <p class="mt-6 text-lg leading-8 text-gray-600">
-                {t("hero.description3")}
-              </p>
+              {
+                t("hero.description3") && (
+                  <p class="mt-6 text-lg leading-8 text-gray-600">
+                    {t("hero.description3")}
+                  </p>
+                )
+              }
               <div class="mt-10 flex items-center gap-x-6">
                 <a
                   href={translatePath("/contact")}
