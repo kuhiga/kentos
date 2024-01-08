@@ -79,9 +79,9 @@ const Contact = ({ lang }: { lang: string }) => {
           />
         </div>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mt-2 text-3xl font-thin tracking-tight text-gray-900 sm:text-4xl">
+          <h1 className="mt-2 text-3xl font-thin tracking-tight text-gray-900 sm:text-4xl">
             {t("contact.header")}
-          </p>
+          </h1>
           {/* <p className="mt-2 text-lg leading-8 text-gray-600">
       Ready to elevate your English skills? I'm here to help! Feel free to reach
       out with any questions or to schedule a session. Your language journey is
