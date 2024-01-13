@@ -4,9 +4,25 @@ import {
   useTranslatedPath,
   useTranslations,
 } from "../i18n/utils";
+import { contentfulClient } from "../lib/contentful/client";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { EntryFieldTypes } from "contentful";
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
-const t = useTranslations(lang);
+
+interface Home {
+  contentTypeId: "homePage";
+  fields: {
+    header: EntryFieldTypes.Text;
+    description: EntryFieldTypes.RichText;
+    contactButton: EntryFieldTypes.Text;
+    meetTutorLink: EntryFieldTypes.Text;
+  };
+}
+const homePageContent = await contentfulClient.getEntry<Home>(
+  "40mDPu3XBJAKMga3KH59C",
+  { locale: lang },
+);
 ---
 
 <div class="pt-6 md:pt-4 lg:pt-0 pb-12">
@@ -39,7 +55,7 @@ const t = useTranslations(lang);
               <h1
                 class="text-center lg:text-start text-4xl font-semibold md:font-light tracking-tight text-white lg:text-gray-900 sm:text-5xl"
               >
-                {t("hero.header")}
+                {homePageContent.fields.header}
               </h1>
             </div>
             <div class="relative mt-7 pb-4 flex justify-center lg:hidden">
@@ -47,7 +63,7 @@ const t = useTranslations(lang);
                 href={translatePath("/contact")}
                 class="w-64 text-center rounded-md bg-blue-400 px-3.5 py-3.5 text-med font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                {t("hero.contact")}
+                {homePageContent.fields.contactButton}
               </a>
             </div>
 
@@ -55,31 +71,29 @@ const t = useTranslations(lang);
             <div
               class="relative flex-col pt-2 lg:pt-6 pb-0 z-10 mt-5 md:mt-3 lg:mt-0"
             >
-              <p class="mt-6 text-lg leading-8 text-gray-600">
-                {t("hero.description")}
-              </p>
-              <p class="mt-6 text-lg leading-8 text-gray-600">
-                {t("hero.description2")}
-              </p>
-              {
-                t("hero.description3") && (
-                  <p class="mt-6 text-lg leading-8 text-gray-600">
-                    {t("hero.description3")}
-                  </p>
-                )
-              }
-              <div class="mt-10 flex items-center gap-x-6">
+              <article
+                class="mt-6 text-lg leading-8 text-gray-600"
+                set:html={documentToHtmlString(
+                  homePageContent.fields.description,
+                ).replace(/\n/g, `</br>`)}
+              />
+              <div
+                class="mt-10
+                flex
+                items-center
+                gap-x-6"
+              >
                 <a
                   href={translatePath("/contact")}
                   class="rounded-md bg-blue-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  {t("hero.contact")}
+                  {homePageContent.fields.contactButton}
                 </a>
                 <a
                   href={translatePath("/team")}
                   class="text-sm font-normal leading-6 text-gray-900"
                 >
-                  {t("hero.meetTutor")}
+                  {homePageContent.fields.meetTutorLink}
                   <span aria-hidden="true">→</span>
                 </a>
               </div>

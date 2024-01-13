@@ -30,24 +30,6 @@ export const ui = {
     "nav.testimonials": "Testimonials",
     "nav.pricing": "Pricing",
     "nav.contact": "Contact",
-    //hero
-    "hero.header": "Let's talk story!",
-    "hero.description": `Embark on a journey to get comfortable and boost your self-confidence in your English. At Talk Story English, we create a learning environment where warmth, friendliness, and Aloha are the heart of every session. `,
-    "hero.description2": `In Hawaiian Pidgin English, you'll often hear the expression "talk story", which signifies an open and casual conversation. It involves investing your time in engaging in unhurried, personable conversations, where people listen and exchange stories, experiences, and ideas. This practice leads to stronger connections and understanding among those who share the space to talk story.`,
-    "hero.description3": undefined,
-    "hero.contact": "Schedule a free trial lesson",
-    "hero.meetTutor": "Meet your tutor",
-
-    //team
-    "team.header": "Aloha! I'm Kent.",
-    "team.description1":
-      "I took a bold step at the age of 15, leaving my family to embark on a solo journey to Japan. Over the course of 15 years and across five different cities, I immersed myself in diverse cultures and backgrounds, learning the joy and the importance of effective communication.",
-    "team.description2":
-      "My life experiences have underscored the belief that the ability to connect with people from various walks of life leads to more profound connections, friendships, and an enriched understanding of different cultures - ultimately contributing to a fuller, happier life.",
-    "team.description3":
-      "At Talk Story English, we foster a warm and hospital environment for you to practice and enhance your English skills. My lessons are primarily conversational, tailored to your unique goals.",
-    "team.description4":
-      "Ready for the next step? Schedule a free trial lesson now and let's embark on this journey together!",
 
     //feedback
     "feedback.header": "Feedbacks from students",
@@ -97,10 +79,6 @@ export const ui = {
     "formSubmitted.thanks": "Mahalo Nui!",
     "formSubmitted.description": `Your form submission has been received. We'll get back to you as soon as we can!`,
     "formSubmitted.goBack": "Go back",
-
-    //youtube
-    "video.introduction":
-      "https://www.youtube.com/embed/NXdoQBxUIgg?si=SKYptFkvwJtl9esT",
   },
   ja: {
     "nav.home": "ホーム",
@@ -108,27 +86,6 @@ export const ui = {
     "nav.testimonials": "生徒の声",
     "nav.pricing": "料金プラン",
     "nav.contact": "お問い合わせ",
-    //hero
-    "hero.header": "Let's talk story!",
-    "hero.description":
-      "Talk Story Englishでは、温かさ、親しみやすさ、アロハを大切にしたハワイ発のオンライン英会話サービスです。",
-    "hero.description2":
-      "ハワイのピジン英語では、「talk story」という表現があり、これは、オープンでカジュアルな対話とコミュニケーションを意味します。ゆったりとした時間の中で、会話を通して、お互いのストーリーを共有することを大切にする文化から生まれた表現です。",
-    "hero.description3":
-      "英語を話すことに自信を持つには、練習あるのみです。深く考えすぎず、英語で話すことを心から楽しみましょう！",
-    "hero.contact": "無料体験レッスンのお申し込み",
-    "hero.meetTutor": "講師について",
-
-    //team
-    "team.header": "Aloha! ケントです。",
-    "team.description1":
-      "サンフランシスコのベイエリアで生まれ育った私は、15歳の時に家族と離れ、日本へ一人で行くという思い切った一歩を踏み出しました。それからの15年間、日本、スペイン、ハワイで5つの異なる都市に住み、多様な文化と背景に身を置き、コミュニケーションの楽しさと大切さを学びました。",
-    "team.description2":
-      "私の今までの人生経験から、様々なバックグラウンドの人と会話をすることが、より深い友情や異文化への理解につながり、最終的には、より豊かで幸せな人生を送ることにつながると確信しています。",
-    "team.description3":
-      "Talk Story Englishでは、皆様の英語力を高めるために最適な、温かさと親しみやすさが溢れた環境作りを目指し、皆様それぞれの目標に合わせた、会話を中心としたレッスンを行ないます。そして、ハワイが好きな生徒の方には、旅行業界のプロとして、ハワイ旅行に関してのアドバイス、最新のトレンドやハワイの文化についてご紹介することもできます！",
-    "team.description4":
-      "さて、準備はできましたか？まずは、無料体験レッスンを予約いただき、一緒に英語に慣れ、英語に自信をつける旅に出かけましょう！",
 
     //feedback
     "feedback.header": "生徒の声",
@@ -175,9 +132,5 @@ export const ui = {
     "formSubmitted.thanks": "Mahalo Nui!",
     "formSubmitted.description": `フォームの送信を受け付けました。できるだけ早くお返事いたします！`,
     "formSubmitted.goBack": "戻る",
-
-    //youtube
-    "video.introduction":
-      "https://www.youtube.com/embed/C7VDIoaC3xE?si=FoYcMI4zZexCFYeB",
   },
 } as const;

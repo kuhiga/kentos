@@ -4,8 +4,24 @@ import { Image } from "astro:assets";
 import KentProfPic from "../assets/kent.jpg";
 import HawaiiPanoramic from "../assets/hawaii_panoramic.jpg";
 const lang = getLangFromUrl(Astro.url);
-// const translatePath = useTranslatedPath(lang);
+import { contentfulClient } from "../lib/contentful/client";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { EntryFieldTypes } from "contentful";
 const t = useTranslations(lang);
+
+
+interface Team {
+  contentTypeId: "homePage";
+  fields: {
+    header: EntryFieldTypes.Text;
+    aboutKentSection: EntryFieldTypes.RichText;
+    talkStoryIntroYoutubeLink: EntryFieldTypes.Text
+  };
+}
+const teamPageContent = await contentfulClient.getEntry<Team>(
+  "5UqzEe1nvZ8h9W3eXzPpyR",
+  { locale: lang },
+);
 ---
 
 <div class="flex-col -z-10 overflow-hidden pt-32">
@@ -18,7 +34,7 @@ const t = useTranslations(lang);
           <h1
             class="align-center mt-2 text-3xl font-thin text-gray-900 sm:text-4xl "
           >
-            {t("team.header")}
+                {teamPageContent.fields.header}
           </h1>
                 <!-- Image for small screens (sm) -->
       <div class="lg:hidden mt-10 mb-6 max-w-3xl mx-auto">
@@ -31,15 +47,12 @@ const t = useTranslations(lang);
             allowfullscreen></iframe>
       </div>
           <div class="mt-6 max-w-3xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-            <p class="mt-6 text-xl leading-8 text-gray-600">
-              {t("team.description1")}
-              <br /><br />
-              {t("team.description2")}
-              <br /><br />
-              {t("team.description3")}
-              <br /><br />
-              {t("team.description4")}
-            </p>
+              <article
+                class="mt-6 text-xl leading-8 text-gray-600"
+                set:html={documentToHtmlString(
+                  teamPageContent.fields.aboutKentSection,
+                ).replace(/\n/g, `</br>`)}
+              />
           </div>
         </div>
 
