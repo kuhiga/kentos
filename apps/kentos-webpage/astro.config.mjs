@@ -8,6 +8,13 @@ import partytown from "@astrojs/partytown";
 export default defineConfig({
   site: "https://talkstoryenglish.com",
   base: "/",
+  redirects: {
+    "/ja": "/",
+    "/ja/contact": "/contact",
+    "/ja/pricing": "/pricing",
+    "/ja/team": "/team",
+    "/ja/testimonials": "/testimonials",
+  },
   integrations: [
     tailwind(),
     react(),
