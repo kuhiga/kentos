@@ -23,9 +23,9 @@ const cleanRoute = route ? route.replace(/\//g, "") : undefined;
   const englishBtn = document.querySelector("button.englishBtn");
   const japaneseBtn = document.querySelector("button.japaneseBtn");
   englishBtn.addEventListener("click", () => {
-    window.location.href = `/${cleanRoute ? cleanRoute : ""}`;
+    window.location.href = `/en/${cleanRoute ? cleanRoute : ""}`;
   });
   japaneseBtn.addEventListener("click", () => {
-    window.location.href = `/ja/${cleanRoute ? cleanRoute : ""}`;
+    window.location.href = `/${cleanRoute ? cleanRoute : ""}`;
   });
 </script>

@@ -13,7 +13,7 @@ export default defineConfig({
     react(),
     sitemap({
       i18n: {
-        defaultLocale: "en",
+        defaultLocale: "ja",
         locales: {
           en: "en-US",
           ja: "ja-JP",
