@@ -31,7 +31,7 @@ export const ui = {
     "nav.pricing": "Pricing",
     "nav.contact": "Contact",
     //hero
-    "hero.header": "Let’s talk story!",
+    "hero.header": "Let's talk story!",
     "hero.description": `Embark on a journey to get comfortable and boost your self-confidence in your English. At Talk Story English, we create a learning environment where warmth, friendliness, and Aloha are the heart of every session. `,
     "hero.description2": `In Hawaiian Pidgin English, you'll often hear the expression "talk story", which signifies an open and casual conversation. It involves investing your time in engaging in unhurried, personable conversations, where people listen and exchange stories, experiences, and ideas. This practice leads to stronger connections and understanding among those who share the space to talk story.`,
     "hero.description3": undefined,
@@ -39,7 +39,7 @@ export const ui = {
     "hero.meetTutor": "Meet your tutor",
 
     //team
-    "team.header": "Aloha! I’m Kent.",
+    "team.header": "Aloha! I'm Kent.",
     "team.description1":
       "I took a bold step at the age of 15, leaving my family to embark on a solo journey to Japan. Over the course of 15 years and across five different cities, I immersed myself in diverse cultures and backgrounds, learning the joy and the importance of effective communication.",
     "team.description2":
@@ -47,7 +47,7 @@ export const ui = {
     "team.description3":
       "At Talk Story English, we foster a warm and hospital environment for you to practice and enhance your English skills. My lessons are primarily conversational, tailored to your unique goals.",
     "team.description4":
-      "Ready for the next step? Schedule a free trial lesson now and let’s embark on this journey together!",
+      "Ready for the next step? Schedule a free trial lesson now and let's embark on this journey together!",
 
     //feedback
     "feedback.header": "Feedbacks from students",
@@ -109,7 +109,7 @@ export const ui = {
     "nav.pricing": "料金プラン",
     "nav.contact": "お問い合わせ",
     //hero
-    "hero.header": "Let’s talk story!",
+    "hero.header": "Let's talk story!",
     "hero.description":
       "Talk Story Englishでは、温かさ、親しみやすさ、アロハを大切にしたハワイ発のオンライン英会話サービスです。",
     "hero.description2":
