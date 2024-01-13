@@ -6,6 +6,7 @@ export const languages = {
 export const defaultLang = "ja";
 export const showDefaultLang = false;
 
+
 export const routes = {
   en: {
     home: "/",
