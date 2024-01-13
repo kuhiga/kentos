@@ -1,0 +1,15 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Contact from "../../../components/Contact.tsx";
+import { getLangFromUrl } from "../../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+---
+
+<Layout
+  title="Contact | Talk Story English"
+  description="Connect with Talk Story English for a free trial lesson! Embark on your journey to get comfortable and build that self confidence today!"
+>
+  <main>
+    <Contact client:only="react" lang={lang} />
+  </main>
+</Layout>

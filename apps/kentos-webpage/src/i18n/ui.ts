@@ -3,7 +3,7 @@ export const languages = {
   ja: "日本語",
 };
 
-export const defaultLang = "en";
+export const defaultLang = "ja";
 export const showDefaultLang = false;
 
 export const routes = {
