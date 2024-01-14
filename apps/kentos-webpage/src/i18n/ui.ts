@@ -6,7 +6,6 @@ export const languages = {
 export const defaultLang = "ja";
 export const showDefaultLang = false;
 
-
 export const routes = {
   en: {
     home: "/",
@@ -107,13 +106,13 @@ export const ui = {
     "pricing.plan1.description": "月２回レッスンプラン",
     "pricing.plan1.highlight1": "マンツーマンの個別セッション",
     "pricing.plan1.highlight2": "オンラインレッスンはZOOMにて行います",
-    "pricing.plan1.highlight3": "月2回50分・50分あたりに換算すると¥4000",
+    "pricing.plan1.highlight3": "月2回50分 (50分あたり¥4000)",
     "pricing.plan1.button": "お問い合わせ",
     "pricing.plan2.price": "¥14000",
     "pricing.plan2.description": "月4回レッスンプラン",
     "pricing.plan2.highlight1": "マンツーマンの個別セッション",
     "pricing.plan2.highlight2": "オンラインレッスンはZOOMにて行います",
-    "pricing.plan2.highlight3": "月4回50分・50分あたりに換算すると¥3500",
+    "pricing.plan2.highlight3": "月4回50分 (50分あたり¥3500)",
     "pricing.plan2.button": "お問い合わせ",
     "pricing.plan3.price": "¥0",
     "pricing.plan3.description": "無料体験",
