@@ -6,7 +6,6 @@ import { sendAnalyticEvent } from './services/sendEvent.ts';
 
 const router = new Router();
 
-
 router.post('/forms/contact', async (ctx) => {
   const body = ctx.request.body();
   const formData: FormData = await body.value;
