@@ -60,7 +60,7 @@ export const ui = {
     "pricing.plan3.description": "Free Trial Lesson",
     "pricing.plan3.highlight1": "One-on-one individual session",
     "pricing.plan3.highlight2": "Online lesson will be conducted via ZOOM",
-    "pricing.plan3.highlight3": "40 minutes",
+    "pricing.plan3.highlight3": "50 minutes",
     "pricing.plan3.button": "Get started",
 
     "pricing.bestDealBadge": "Best Deal",
@@ -118,7 +118,7 @@ export const ui = {
     "pricing.plan3.description": "無料体験",
     "pricing.plan3.highlight1": "マンツーマンの個別セッション",
     "pricing.plan3.highlight2": "オンラインレッスンはZOOMにて行います",
-    "pricing.plan3.highlight3": "40分",
+    "pricing.plan3.highlight3": "50分",
     "pricing.plan3.button": "お問い合わせ",
     "pricing.bestDealBadge": "お得プラン",
     "pricing.perMonth": "/一ヶ月",
