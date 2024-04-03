@@ -19,6 +19,7 @@
     "@heroicons/react": "2.1.1",
     "astro": "^4.0.6",
     "contentful": "^10.6.16",
+    "firebase": "^10.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "6.21.1",

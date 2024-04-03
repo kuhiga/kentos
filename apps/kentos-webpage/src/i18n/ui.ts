@@ -122,7 +122,7 @@ export const ui = {
     "pricing.plan3.button": "お問い合わせ",
     "pricing.bestDealBadge": "お得プラン",
     "pricing.perMonth": "/一ヶ月",
-    "pricing.taxExclusionNotice": "＊金額は「税別」の表記となっています",
+    "pricing.taxExclusionNotice": "",
     //contact
     "contact.header": "お問い合わせ",
     "contact.firstName": "名",
