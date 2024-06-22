@@ -52,12 +52,6 @@
       "application": {
         "babel": true
       }
-    },
-    "@nx/next": {
-      "application": {
-        "style": "css",
-        "linter": "eslint"
-      }
     }
   },
   "nxCloudAccessToken": "YjgzYmNmMzEtNmMwYy00ZGRhLTg2MjYtNWJjZWRhNzFhOWRlfHJlYWQtd3JpdGU=",
