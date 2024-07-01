@@ -4,20 +4,24 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const featuredTestimonial = {
   body: t("feedback.featured"),
+  author: "Yさん",
 };
 const testimonials = [
   [
     [
       {
         body: t("feedback.1"),
+        author: "Hさん",
       },
       {
         body: t("feedback.2"),
+        author: "Sさん",
       },
     ],
     [
       {
         body: t("feedback.3"),
+        author: "Aさん",
       },
     ],
   ],
@@ -25,17 +29,21 @@ const testimonials = [
     [
       {
         body: t("feedback.4"),
+        author: "Mさん",
       },
       {
         body: t("feedback.5"),
+        author: "Yさん",
       },
     ],
     [
       {
         body: t("feedback.6"),
+        author: "Sさん",
       },
       {
         body: t("feedback.7"),
+        author: "Mさん",
       },
     ],
   ],
@@ -91,6 +99,9 @@ function classs(...classes) {
           class="p-6 text-lg font-normal leading-7 tracking-tight text-gray-900 sm:p-12 sm:text-xl sm:leading-8"
         >
           <p>{`“${featuredTestimonial.body}”`}</p>
+          <div class="font-light mt-2 text-sm">
+            - {featuredTestimonial.author}
+          </div>
         </blockquote>
       </figure>
       {
@@ -110,9 +121,12 @@ function classs(...classes) {
                 {column.map(
                   (testimonial) =>
                     testimonial.body && (
-                      <figure class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5">
+                      <figure class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5 ">
                         <blockquote class="text-gray-900">
                           <p>{`“${testimonial.body}”`}</p>
+                          <div class="font-light pt-2 text-sm">
+                            - {testimonial.author}
+                          </div>
                         </blockquote>
                       </figure>
                     ),
